@@ -84,3 +84,30 @@ live 値を含む出力（`/tmp/a7cii-live-check.json`）は、リポジトリ�
 製品クラス（`PP`）側に持たれているため、バックアップ値を立てても
 メニュー側の判定が先に効く可能性がある。詳細と次の確認手順は
 [../TODO.md](../TODO.md) の実験1の節。
+
+## 連番だと思って `base + n` で計算してはいけない
+
+`bkid_inventory.py` は各 BKID の id を、ファームウェア自身の名前レコード
+（`id,len,ptr` レイアウト）から**読み出している**。推定ではない。
+6,450 件すべてで property_id の重複は無い。
+
+にもかかわらず、`FOO0` と `FOO1` の id を見て step を 1 と決め、
+`FOO<n> = base + n` と計算するのは誤り。**系統は途中で飛ぶ。**
+ユーザー LUT の50枠がその例で、5系統すべて 0〜15 だけが一続きになっている：
+
+| 系統 | 枠 0〜15 | 枠 16 以降 |
+| --- | --- | --- |
+| `IS_EXIST_USER_LUT` | `0x02cf105c`〜`0x02cf106b` | `0x02cf141e` から一続きで 49 まで |
+| `USER_LUT_FILE_ID` | `0x02cf106c`〜`0x02cf107b` | `0x02cf1440` ほか5ブロックに分散 |
+| `USER_LUT_ATTR_INPUT_GAMUT` | `0x02cf107c`〜`0x02cf108b` | `0x02cf16d8` から一続き |
+| `USER_LUT_ATTR_OUTPUT_PROCAM` | `0x02cf1450`〜`0x02cf145f` | `0x02cf176a` から一続き |
+| `USER_LUT_ATTR_AE_LEVEL_OFFSET` | `0x02cf104c`〜`0x02cf105b` | `0x02cf13a8` ほか4ブロックに分散 |
+
+`IS_EXIST_USER_LUT15` は `0x02cf106b` で、`16` は `0x02cf141e` に飛ぶ。
+`base + n` で計算すると `IS_EXIST_USER_LUT16` が `0x02cf106c` になるが、
+これは `USER_LUT_FILE_ID0` の id である。
+
+実際にそれで実機を読み、**隣の系統の値を違う名前で読んだ**結果を
+「枠16〜49が全部デフォルトと違う」という発見だと誤認した事例がある
+（shell-access リポジトリ `docs/LUT.md` に経緯を記録）。
+JSON の `property_id` を名前で引くこと。計算しないこと。
