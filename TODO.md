@@ -62,8 +62,20 @@
 # 残タスク一覧（2026-11-24 時点）
 
 完了：サービスモード接続、設定バックアップ取得、主要プロパティの
-読み取り照合、製品クラスの確定（`PRODUCT_MODEL_PP`）、地域の確定（J1）。
-残っているのは以下。
+読み取り照合、製品クラスの確定（`PRODUCT_MODEL_PP`）、地域の確定（J1）、
+ファームウェア版数の確定（A）、BK4 チェックサム検証（D）、
+CFexpress の訂正（E）。
+
+**残っているのは実機が必須の2件だけ**：
+
+| | 内容 | 必要なもの |
+| --- | --- | --- |
+| B | Jiritsu 読み取り専用プローブ | 実機。ただし Jiritsu の入口（`0xff00` TestMode）は**サービス権限レベル A のテーブルにしか無い**ことが判明しているので、先にレベルを測る |
+| C | プロパティ変更の実験（1件ずつ） | 実機。レベルに関係なく実施できる |
+
+レベルの測り方と実機セッションの手順は、派生リポジトリ
+[sony-a7cii-shell-access](https://github.com/soralis0912/sony-a7cii-shell-access)
+の `scripts/survey_readonly.py` と `docs/FIELD_SESSION.md` にまとめた。
 
 ## A. ファームウェア版数の確認【完了】
 
@@ -72,6 +84,10 @@
   解析対象の 2.01 と一致しており、版数の食い違いはない。
 
 ## B. Jiritsu 読み取り専用プローブ（旧セクション4）
+
+> **前提（2026-11-24 判明）**：Jiritsu はサービスプロトコルの
+> `0xff00` TestMode 経由で、そのディスパッチテーブルは**レベル A のみ**。
+> `survey_readonly.py` でレベル A が出ない機体では、このプローブは通らない。
 
 やり方：
 
@@ -161,34 +177,40 @@
 - [ ] 実験1（MODE_SHUTTER）を実施し、結果と復旧を確認する
 - [ ] 実験2以降を1件ずつ実施する
 
-## D. 実機バックアップの BK4 チェックサム検証
+## D. 実機バックアップの BK4 チェックサム検証【完了・2026-11-24】
 
-やり方（PC 上だけで完結。カメラ接続は不要）：
+PC 上で実行し、**成功条件をすべて満たした**。
 
-1. 研究リポジトリで、実機バックアップと展開済みファームウェアを指定して
-   インベントリを実行する。BK4 パーサは読み込み時にチェックサムを
-   検証するので、エラーなく完走すればチェックサムは有効：
+```bash
+python3 scripts/bkid_inventory.py \
+  <fwtool.py>/unpacked/firmware.tar_unpacked/0700_part_image/dev/nflasha15_unpacked/lib/appFw.so \
+  --backup <PMCA>/a7cii-backup.bin \
+  --update-root <fwtool.py>/unpacked/firmware.tar_unpacked \
+  --json /tmp/a7cii-live-check.json
+```
 
-   ```bash
-   cd ~/git/a7c2/sony-a7cii-feature-research
-   python3 scripts/bkid_inventory.py \
-     <fwtool.py>/unpacked/firmware.tar_unpacked/0700_part_image/dev/nflasha15_unpacked/lib/appFw.so \
-     --backup ~/git/a7c2/Sony-PMCA-RE/a7cii-backup.bin \
-     --update-root <fwtool.py>/unpacked/firmware.tar_unpacked \
-     --json /tmp/a7cii-live-check.json
-   ```
+結果（実行時間 約77秒）：
 
-   （`<fwtool.py>` は fwtool を clone して unpack したディレクトリ）
-2. 成功条件：
-   - `checksum mismatch` 等のエラーが出ない
-   - 出力の各行に `live=...` と `profiles=...` が付き、
-     主要4プロパティの live 値が `00 / 10 / 00 / 01`
-     （`02cf1700 / 1702 / 101d / 102d`）である
-   - `/tmp/a7cii-live-check.json` が生成される（6,450件）
-3. 結果（完走したか、エラー内容）を知らせる。バックアップファイル
-   自体は送らない・コミットしない。
+| 確認項目 | 結果 |
+| --- | --- |
+| BK4 チェックサム | **有効。** `scripts/bk4.py` は読み込み時に検証し、不一致なら `checksum mismatch` を投げる。エラーなく完走した |
+| 出力件数 | **6,450 件**（`/tmp/a7cii-live-check.json`） |
+| 主要4プロパティの live 値 | `0x02cf1700`=`00` / `0x02cf1702`=`10` / `0x02cf101d`=`00` / `0x02cf102d`=`01` ＝**期待どおり** |
+| 各行の付加情報 | 全件に `live=...` と `profiles=...` が付いた |
 
-- [ ] 上記を実行し、チェックサム有効と live 値の整合を確認する
+あわせて実機バックアップのヘッダから判明したこと：
+
+| 項目 | 値 |
+| --- | --- |
+| Backup region | `CX89700_J1`（JP 機。`info` の表示と一致） |
+| バージョン文字列 | `32014_05.2025101101` — 展開済み 2.01 の p7 `version.txt` と**完全一致** |
+| バックアップ内のプロパティ総数 | 29,176（うち `BKID_APP_*` として名前が付くのが 6,450） |
+
+バージョン文字列の一致は、セクション A（実機は Ver. 2.01）の**独立した裏付け**になる。
+
+- [x] 上記を実行し、チェックサム有効と live 値の整合を確認する
+- 生成した `/tmp/a7cii-live-check.json` は live 値を含むためコミットしない
+  （リポジトリ方針どおり、生成データはローカルに留める）
 
 ## E. CFexpress パラメータ【完了・訂正済み】
 
