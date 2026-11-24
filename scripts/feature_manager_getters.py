@@ -32,6 +32,17 @@ SCAN_FROM, SCAN_TO = 0x1797000, 0x179A000     # the stub block in 2.01
 CLASS_SLOT = 0x5B0                            # [class-index global + 0x5b0]
 CLASS_COUNT = 26
 
+# Array index -> product class, resolved by matching every named parameter's
+# per-class value against feature_manager_matrix.py's output: each class lands
+# on exactly one index, with 39 of 39 named parameters agreeing. The order is
+# the reverse of the matrix script's own product enumeration, so the matrix's
+# index is NOT the table index.
+CLASS_INDEX = ["DOC", "MT", "RS", "HC", "NE", "OT_UUD", "TK_UUD", "ALCIN2",
+               "LUKE", "CHAPLIN", "EREN", "POTTER", "HARRY", "TAKE_BASIC",
+               "ATOM", "SP", "PP", "OS", "YS", "DZ", "SA", "YT", "GL",
+               "ALCIN_UUD", "LAX", "LS"]
+A7CII = CLASS_INDEX.index("PP")        # 16
+
 
 def sections(blob: bytes) -> dict[str, tuple[int, int, int]]:
     shoff = struct.unpack_from("<Q", blob, 0x28)[0]
@@ -122,11 +133,15 @@ def main() -> int:
             print("   class %2d: %d" % (i, v))
         return 0
 
-    print("%-12s %-12s %-30s %s" % ("stub", "table", "name", "call sites"))
+    print("the A7C II (PP) reads index %d of each table\n" % A7CII)
+    print("%-12s %-12s %-30s %-6s %-9s %s"
+          % ("stub", "table", "name", "a7cii", "shared_by", "call sites"))
     for stub in sorted(stubs):
-        print("%#011x %#011x %-30s %d"
-              % (stub, stubs[stub], names.get(stub, "(unnamed)"),
-                 len(sites.get(stub, ()))))
+        values = struct.unpack_from("<%di" % CLASS_COUNT, blob, stubs[stub])
+        mine = values[A7CII]
+        print("%#011x %#011x %-30s %-6d %-9d %d"
+              % (stub, stubs[stub], names.get(stub, "(unnamed)"), mine,
+                 values.count(mine), len(sites.get(stub, ()))))
 
     if args.json:
         args.json.parent.mkdir(parents=True, exist_ok=True)
@@ -134,6 +149,8 @@ def main() -> int:
             "appfw": str(args.appfw),
             "class_index_global": hex(class_global) if class_global else None,
             "class_count": CLASS_COUNT,
+            "class_index": CLASS_INDEX,
+            "a7cii_index": A7CII,
             "getters": [{
                 "stub": hex(s), "table": hex(stubs[s]),
                 "name": names.get(s),
