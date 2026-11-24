@@ -2,9 +2,33 @@
 """Read one fixed ILCE-7CM2 file through the Jiritsu traversal behavior."""
 
 import hashlib
+import os
 import struct
+import sys
+from pathlib import Path
 
-from pmca.commands.usb import senserShellCommand
+
+def _bootstrap_pmca():
+    """Make the pmca package importable.
+
+    Accepts --pmca-root PATH or the PMCA_ROOT environment variable,
+    like the PTP scripts. Note: sudo strips PYTHONPATH, so pass the
+    root explicitly when running under sudo.
+    """
+    root = os.environ.get("PMCA_ROOT")
+    argv = sys.argv[1:]
+    if "--pmca-root" in argv:
+        i = argv.index("--pmca-root")
+        root = argv[i + 1]
+        del argv[i : i + 2]
+        sys.argv[1:] = argv
+    if root:
+        sys.path.insert(0, str(Path(root).expanduser().resolve()))
+
+
+_bootstrap_pmca()
+
+from pmca.commands.usb import senserShellCommand  # noqa: E402
 
 
 JIRITSU_CATEGORY = 0x1001
