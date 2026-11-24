@@ -25,11 +25,12 @@
 
 ## 3. 製品クラスの実機確定
 
-- [ ] `scripts/a7cii_ptp_snapshot.py` で実機のスナップショットを取得する
-- [ ] feature manager の実値を
-  [evidence/feature-manager-a7cii-201.json](evidence/feature-manager-a7cii-201.json)
-  と突き合わせ、ILCE-7CM2 の製品クラスを確定する
-  （背景： [docs/PRODUCT_CLASS.md](docs/PRODUCT_CLASS.md)）
+- [x] `scripts/a7cii_ptp_snapshot.py` で実機のスナップショットを取得する
+  （2026-11-24 実施：420 コード、392 ディスクリプタをデコード）
+- [x] ILCE-7CM2 の製品クラスを確定する → **`PRODUCT_MODEL_PP` で確定**
+  （決め手：実機の Backup region CX89700_J1 がファームウェア内の
+  `0110_backup/SYSIPSX-DSLR/PP/` に対応。特性照合でも26クラス中 PP のみ
+  全一致。詳細： [docs/PRODUCT_CLASS.md](docs/PRODUCT_CLASS.md)）
 
 ## 4. Jiritsu 読み取り専用プローブ
 
