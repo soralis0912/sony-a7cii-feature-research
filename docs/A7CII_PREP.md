@@ -13,8 +13,8 @@ on a physical A7C II.
 | Firmware studied | 6.02 | Ver. 2.01 (Sony JP, 2025-11-11) |
 | Update file | `BODYDATA.DAT` | `BODYDATA.DAT` (~1.1 GB) |
 | SoC | CXD90057 (BIONZ XR) | CXD90057 (BIONZ XR) — same family |
-| FDAT model ID | `0x01030081` (verified, 6.02) | **TBD — read from the unpacked 2.01 header** |
-| Crypter | `CXD90057_k8` (verified, 6.02) | **TBD — k0 or k8, whichever fwtool reports** |
+| FDAT model ID | `0x01030081` (verified, 6.02) | `0x20030014` (verified by unpacking 2.01) |
+| Crypter | `CXD90057_k8` (verified, 6.02) | `CXD90057_k8` (verified by unpacking 2.01) |
 
 ## Already prepared
 
@@ -65,10 +65,14 @@ on a physical A7C II.
 
 ## Verification sequence
 
-1. Unpack the official ILCE-7CM2 Ver. 2.01 `BODYDATA.DAT` with the
-   fwtool `a7cII` branch. Record model ID, version and crypter name.
-   Add the resulting `ILCE-7CM2` entry to `devices.yml` in the fwtool
-   fork (no guessed model ID before this step).
+1. ~~Unpack the official ILCE-7CM2 Ver. 2.01 `BODYDATA.DAT` with the
+   fwtool `a7cII` branch.~~ **Done 2026-11-24:** unpack succeeded —
+   model `0x20030014`, version `2.01`, region `0`, crypter
+   `CXD90057_k8`; source file 1,139,929,560 bytes, SHA-256
+   `eb4943e6099754d64deaef5047942e9bfe258f232d0b7bc39fa23b3cd10e1e31`
+   (official Sony JP download). `ILCE-7CM2` was added to `devices.yml`
+   in the fwtool fork (branch `a7cII`, commit `dd4def0`). The expected
+   partition layout (`nflasha3/7/8/15`, `lib/appFw.so`) was present.
 2. Confirm the partition layout and hash-match the extracted files
    against the update, as was done for the A7 IV.
 3. Determine the A7C II product class from its own `appFw.so`

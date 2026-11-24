@@ -39,14 +39,14 @@ ILCE-7CM2 hardware.
 | Firmware | Ver. 2.01 (Sony JP, 2025-11-11) |
 | Update file | `BODYDATA.DAT` (~1.1 GB, official Sony download) |
 | SoC | CXD90057 (BIONZ XR), same family as ILCE-7M4 |
-| FDAT model ID | TBD — to be read from the unpacked 2.01 header |
-| Crypter | TBD — `CXD90057_k0` or `CXD90057_k8`, as fwtool reports |
+| FDAT model ID | `0x20030014` (verified by unpacking 2.01) |
+| Crypter | `CXD90057_k8` (verified by unpacking 2.01) |
 
 ## Research status
 
 | Feature | Status |
 | --- | --- |
-| Firmware unpacking (fwtool, CXD90057) | Prepared — tooling ready, unpack pending |
+| Firmware unpacking (fwtool, CXD90057) | **Verified** — official 2.01 `BODYDATA.DAT` unpacked (model `0x20030014`, crypter `CXD90057_k8`) |
 | Service mode | Untested on ILCE-7CM2 |
 | Settings backup | Untested |
 | Decrypted filesystem read | Untested |
