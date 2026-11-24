@@ -63,19 +63,30 @@
 
 完了：サービスモード接続、設定バックアップ取得、主要プロパティの
 読み取り照合、製品クラスの確定（`PRODUCT_MODEL_PP`）、地域の確定（J1）、
-ファームウェア版数の確定（A）、BK4 チェックサム検証（D）、
-CFexpress の訂正（E）。
+ファームウェア版数の確定（A）、**Jiritsu 読み取りプローブ（B）**、
+BK4 チェックサム検証（D）、CFexpress の訂正（E）。
 
-**残っているのは実機が必須の2件だけ**：
+**残っているのは C（プロパティ変更の実験）だけ。**
 
-| | 内容 | 必要なもの |
-| --- | --- | --- |
-| B | Jiritsu 読み取り専用プローブ | 実機。ただし Jiritsu の入口（`0xff00` TestMode）は**サービス権限レベル A のテーブルにしか無い**ことが判明しているので、先にレベルを測る |
-| C | プロパティ変更の実験（1件ずつ） | 実機。レベルに関係なく実施できる |
+## B が通ったことの意味（2026-11-24）
 
-レベルの測り方と実機セッションの手順は、派生リポジトリ
+Jiritsu は Senser プロトコルの `0xff00` TestMode 経由で、
+`libsencore.so` のディスパッチテーブルを読むと **`0xff00` は
+`pFunc_level_A` にしか無い**（レベル B は `0x40`/`0x10`/`0x20`、
+レベル C は `0x40` のみ）。
+B のプローブが `status 0` で通ったということは、**この機体の認証は
+レベル A に到達している**ということになる。
+
+同じコードが `terminal_change_function_is_disabled = (level != 3)` を
+設定するので、レベル A なら**サービス USB 端末のゲートが開いている**。
+つまり PMCA の `serviceshell` → `shell` で、カメラに何も書き込まずに
+root コンソール（通常起動の initrd が回している `ash --login`）に
+繋がる見込みが高い。
+
+これは静的解析からの**推論**で、ゲートのバイトを直接見たわけではない。
+確かめ方と、その先の手順は派生リポジトリ
 [sony-a7cii-shell-access](https://github.com/soralis0912/sony-a7cii-shell-access)
-の `scripts/survey_readonly.py` と `docs/FIELD_SESSION.md` にまとめた。
+（`scripts/survey_readonly.py`、`docs/FIELD_SESSION.md`）にまとめた。
 
 ## A. ファームウェア版数の確認【完了】
 
