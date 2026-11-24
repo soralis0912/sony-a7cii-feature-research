@@ -73,28 +73,120 @@
 
 ## B. Jiritsu 読み取り専用プローブ（旧セクション4）
 
-- [ ] `scripts/a7cii_jiritsu_readonly_probe.py` を実行し、
-  `/usr/share/pmbp/DeviceInfo.xml` が読めるか確認する
-- [ ] 取得したファイルのサイズと SHA-256 を、展開済みファームウェアの
-  同一ファイルと照合する（手順： [docs/JIRITSU_DUMP.md](docs/JIRITSU_DUMP.md)）
+やり方：
+
+1. カメラを充電し、USB 設定を **マスストレージ** にして PC に直接接続する
+   （サービスモード接続テストと同じ状態）。
+2. PMCA のディレクトリから、venv の python でプローブを実行する
+   （スクリプトは引数なし。固定パス `/usr/share/pmbp/DeviceInfo.xml` を
+   読み取り専用で取得する）：
+
+   ```bash
+   cd ~/git/a7c2/Sony-PMCA-RE
+   ./venv/bin/python ~/git/a7c2/sony-a7cii-feature-research/scripts/a7cii_jiritsu_readonly_probe.py
+   ```
+
+3. 期待される出力（成功条件）：
+   - `GET_FILE2 inner status: 0x00000000`
+   - `Returned file bytes: 517`
+   - `SHA256: e44713178fad970870ead845c93abdfcf150c418de11b306da91f2d09d67c1b7`
+   - `Matches extracted firmware file: yes`
+   - 最後に XML の中身が表示される
+
+   照合先のハッシュは、展開済み 2.01 の同一ファイル
+   （`nflasha15_unpacked/share/pmbp/DeviceInfo.xml`、517 バイト）から
+   算出した実測値。スクリプト内の期待値とも一致している。
+4. 出力をそのまま貼る（記録はこちらで行う）。
+
+- [ ] プローブを実行し、status 0 / 517 バイト / ハッシュ一致を確認する
 
 ## C. プロパティ変更の実験（旧セクション5、1件ずつ）
 
 対象候補は [docs/FEATURE_INVENTORY.md](docs/FEATURE_INVENTORY.md) の表
-（シャッター角、Log撮影、LUT、デスクイーズ等）。各実験ごとに：
+（シャッター角、Log撮影、LUT、デスクイーズ等）。
+**必ず1プロパティずつ** 行い、各実験は「記録 → 書換 → 保存 → 電源断 →
+確認 → 復旧」の1サイクルで完結させる。前提：セクション2の
+バックアップ取得済みであること。
 
-- [ ] 変更前の値を読み取って記録する
-- [ ] 1プロパティだけ書き換え、`bk s` で保存する
-- [ ] カメラの電源を切り、USB を外し、バッテリーを10秒抜いてから再装着する
-- [ ] メニュー表示・撮影挙動が変わったか実機で確認する
-- [ ] 元の値に戻して復旧できることを確認する
+### 実験1（最初の1件）：シャッター角モード `0x02cf1700` を `00` → `01`
+
+1. serviceshell を起動する：
+
+   ```bash
+   cd ~/git/a7c2/Sony-PMCA-RE
+   sudo ./venv/bin/python ./pmca-console.py serviceshell
+   ```
+
+2. 変更前の値を記録する：
+
+   ```text
+   > bk r 02cf1700
+   00
+   ```
+
+3. 書き換えて、メモリ上で変わったことを確認する：
+
+   ```text
+   > bk w 02cf1700 01
+   > bk r 02cf1700
+   01
+   ```
+
+4. 永続化してシェルを抜ける：
+
+   ```text
+   > bk s
+   > exit
+   ```
+
+5. カメラの電源を切り、USB を外し、**バッテリーを10秒抜いて** から
+   再装着して電源を入れる。
+6. 動画モードでシャッター表示を確認する：
+   速度表示（1/xxx）から角度表示（xxx°）に変わっていれば有効化成功。
+   変わらなければ「反映されなかった」として記録する（失敗ではない）。
+7. **復旧**：再度 serviceshell で `bk w 02cf1700 00` → `bk s` → `exit`、
+   手順5の電源サイクルを繰り返し、表示が元に戻ったことと
+   `bk r 02cf1700` が `00` であることを確認する。
+
+### 実験2以降の候補（同じサイクルで1件ずつ）
+
+| 順 | プロパティ | 変更 | 期待される確認ポイント |
+| --- | --- | --- | --- |
+| 2 | `0x02cf101d` LOG_SHOOTING | `00` → `01` | Log撮影メニュー／ピクチャープロファイルの表示 |
+| 3 | `0x02cf1961` DE_SQUEEZE_DISP | `00` → `01` | デスクイーズ表示メニューの出現 |
+| 4 | `0x02cf1702` SHUTTER_ANGLE | `10` → 別値 | 実験1が有効化できた場合のみ。角度の初期値の変化 |
+
+- [ ] 実験1（MODE_SHUTTER）を実施し、結果と復旧を確認する
+- [ ] 実験2以降を1件ずつ実施する
 
 ## D. 実機バックアップの BK4 チェックサム検証
 
-- [ ] 取得済みバックアップ（2,390,264 バイト、SHA-256 `27ec1eb1…`）を
-  `scripts/bkid_inventory.py --backup` で読み込み、BK4 チェックサムが
-  有効なことと、全プロパティが CX89700_J1 プロファイルと整合することを
-  確認する（ファイル自体は非公開のまま）
+やり方（PC 上だけで完結。カメラ接続は不要）：
+
+1. 研究リポジトリで、実機バックアップと展開済みファームウェアを指定して
+   インベントリを実行する。BK4 パーサは読み込み時にチェックサムを
+   検証するので、エラーなく完走すればチェックサムは有効：
+
+   ```bash
+   cd ~/git/a7c2/sony-a7cii-feature-research
+   python3 scripts/bkid_inventory.py \
+     <fwtool.py>/unpacked/firmware.tar_unpacked/0700_part_image/dev/nflasha15_unpacked/lib/appFw.so \
+     --backup ~/git/a7c2/Sony-PMCA-RE/a7cii-backup.bin \
+     --update-root <fwtool.py>/unpacked/firmware.tar_unpacked \
+     --json /tmp/a7cii-live-check.json
+   ```
+
+   （`<fwtool.py>` は fwtool を clone して unpack したディレクトリ）
+2. 成功条件：
+   - `checksum mismatch` 等のエラーが出ない
+   - 出力の各行に `live=...` と `profiles=...` が付き、
+     主要4プロパティの live 値が `00 / 10 / 00 / 01`
+     （`02cf1700 / 1702 / 101d / 102d`）である
+   - `/tmp/a7cii-live-check.json` が生成される（6,450件）
+3. 結果（完走したか、エラー内容）を知らせる。バックアップファイル
+   自体は送らない・コミットしない。
+
+- [ ] 上記を実行し、チェックサム有効と live 値の整合を確認する
 
 ## E. CFexpress パラメータ【完了・訂正済み】
 
