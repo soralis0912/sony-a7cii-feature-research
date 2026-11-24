@@ -1,87 +1,80 @@
-# Sony A7C II firmware and feature research
+# Sony A7C II ファームウェア・機能リサーチ
 
-Use this at your own risk, I am not responsible for any damages.
+[English version](README_EN.md)
 
-Reproducible notes and tools for studying Sony **ILCE-7CM2** (A7C II)
-firmware **Ver. 2.01** through official update files and Sony's USB
-service mode.
+自己責任で利用してください。本リポジトリの利用による損害について、作者は責任を負いません。
 
-> **Status: preparation only.** Nothing has been verified on an
-> A7C II yet. See [docs/A7CII_PREP.md](docs/A7CII_PREP.md) for the
-> target definition, what may transfer from the A7 IV research, what
-> must be re-derived, and the verification sequence.
+Sony **ILCE-7CM2**（A7C II）のファームウェア **Ver. 2.01** を、公式アップデートファイルと
+Sony の USB サービスモードを使って調査するための、再現可能なメモとツールの置き場です。
 
-## 参考 / Reference
+> **状態：準備のみ。** A7C II 実機ではまだ何も検証していません。
+> 対象の定義、A7 IV の研究から流用できそうなもの、再導出が必要なもの、検証手順は
+> [docs/A7CII_PREP.md](docs/A7CII_PREP.md) を参照してください。
+
+## 参考
 
 このリポジトリは、[leogenot/sony-a7iv-feature-research](https://github.com/leogenot/sony-a7iv-feature-research)
 （Sony A7 IV 6.02 のサービスモード／シャッター角／LUT／ファームウェア研究）を
 **雛形として参考に**、新規に作成したものです。fork ではありません。
+リポジトリ構成、ドキュメント構成、解析スクリプト、研究手法はその研究に基づきます。
+A7 IV の成果はすべて原著者のものです。原典は MIT ライセンスで、その著作権表示は
+[LICENSE](LICENSE) にそのまま保持しています。
 
-This repository was newly created using
-[leogenot/sony-a7iv-feature-research](https://github.com/leogenot/sony-a7iv-feature-research)
-as a template and reference. It is not a fork. The repository layout,
-documentation structure, analysis scripts and research method are based
-on that work; all A7 IV findings credited there belong to the original
-author. The original is MIT-licensed, and its copyright notice is
-retained in [LICENSE](LICENSE).
+雛形経由で引き継いだ A7 IV の結果 — バックアッププロパティ ID（`0x02cfXXXX`）、
+製品クラス `PRODUCT_MODEL_LS` という結論、サービスモード認証の可否、すべての機能ステータス —
+は、どれも A7 IV の結果でしかありません。A7C II では、ILCE-7CM2 のファームウェアから
+再導出するか実機で検証するまでは、すべて「未検証」からやり直します。
 
-Every A7 IV result inherited through the template — backup property
-IDs (`0x02cfXXXX`), the `PRODUCT_MODEL_LS` product-class conclusion,
-service-mode authentication, and all feature statuses — is an A7 IV
-result only. For the A7C II each of them starts over as *untested*
-until re-derived from ILCE-7CM2 firmware or tested on physical
-ILCE-7CM2 hardware.
+## 対象
 
-## Target
-
-| Item | Value |
+| 項目 | 内容 |
 | --- | --- |
-| Model | ILCE-7CM2 (A7C II) |
-| Firmware | Ver. 2.01 (Sony JP, 2025-11-11) |
-| Update file | `BODYDATA.DAT` (~1.1 GB, official Sony download) |
-| SoC | CXD90057 (BIONZ XR), same family as ILCE-7M4 |
-| FDAT model ID | TBD — to be read from the unpacked 2.01 header |
-| Crypter | TBD — `CXD90057_k0` or `CXD90057_k8`, as fwtool reports |
+| 型番 | ILCE-7CM2（A7C II） |
+| ファームウェア | Ver. 2.01（ソニー日本、2025-11-11 公開） |
+| アップデートファイル | `BODYDATA.DAT`（約1.1 GB、Sony 公式ダウンロード） |
+| SoC | CXD90057（BIONZ XR）、ILCE-7M4 と同一ファミリー |
+| FDAT モデル ID | 未定 — unpack した 2.01 のヘッダから読み取る |
+| Crypter | 未定 — `CXD90057_k0` / `CXD90057_k8` のどちらか（fwtool の出力で確定） |
 
-## Research status
+## 研究ステータス
 
-| Feature | Status |
+| 機能 | 状態 |
 | --- | --- |
-| Firmware unpacking (fwtool, CXD90057) | Prepared — tooling ready, unpack pending |
-| Service mode | Untested on ILCE-7CM2 |
-| Settings backup | Untested |
-| Decrypted filesystem read | Untested |
-| Product class | Unknown — to be determined from ILCE-7CM2 `appFw.so` |
-| Shutter angle / Custom LUT / De-Squeeze / Open Gate | Untested — A7 IV property IDs must not be reused |
+| ファームウェア展開（fwtool、CXD90057） | 準備済み — ツールは動作可、unpack はこれから |
+| サービスモード | ILCE-7CM2 では未検証 |
+| 設定バックアップ | 未検証 |
+| 復号済みファイルシステムの読み取り | 未検証 |
+| 製品クラス | 不明 — ILCE-7CM2 の `appFw.so` から特定する |
+| シャッター角／カスタム LUT／デスクイーズ／オープンゲート | 未検証 — A7 IV のプロパティ ID は流用禁止 |
 
-## Upstream and related projects
+## 上流・関連プロジェクト
 
 - [leogenot/sony-a7iv-feature-research](https://github.com/leogenot/sony-a7iv-feature-research):
-  the template and reference for this repository (A7 IV research).
+  本リポジトリの雛形・参考元（A7 IV の研究）。
 - [ma1co/Sony-PMCA-RE](https://github.com/ma1co/Sony-PMCA-RE):
-  USB service-mode transport and backup shell.
-- [soralis0912/fwtool.py](https://github.com/soralis0912/fwtool.py/tree/a7cII),
-  branch `a7cII`: Sony firmware unpacking with CXD90057 support,
-  forked from DavidBuchanan314's `a7iv` branch of fwtool.py.
+  USB サービスモードの通信とバックアップシェル。
+- [soralis0912/fwtool.py](https://github.com/soralis0912/fwtool.py/tree/a7cII)
+  の `a7cII` ブランチ: CXD90057 対応の Sony ファームウェア展開ツール。
+  DavidBuchanan314 の fwtool.py `a7iv` ブランチからの fork。
 - [ma1co/fwtool.py PR #52](https://github.com/ma1co/fwtool.py/pull/52):
-  upstream CXD90057 extraction work; ILCE-7CM2 listed as tested.
+  上流の CXD90057 展開作業。ILCE-7CM2 が動作確認済みリストに入っている。
 
-## Repository layout
+## リポジトリ構成
 
 ```
-docs/       Setup, extraction, service-mode and feature procedures
-            (inherited from the template; A7 IV values are marked in
-            docs/A7CII_PREP.md and must be re-derived)
-scripts/    Read-only backup/dump and offline property-analysis tools
-evidence/   Sanitized property mappings and verification record
-            (currently the template's A7 IV 6.02 data, for comparison)
+docs/       セットアップ、展開、サービスモード、機能別の手順
+            （雛形から引き継ぎ。A7 IV の値は docs/A7CII_PREP.md に
+             記録してあり、再導出が必要）
+scripts/    読み取り専用のバックアップ／ダンプと、オフラインの
+            プロパティ解析ツール
+evidence/   秘匿情報を除いたプロパティ対応表と検証記録
+            （現時点では比較用に雛形の A7 IV 6.02 データ）
 ```
 
-This repository intentionally contains no Sony firmware, decrypted
-binaries, camera backups, serial numbers, decryption keys, or
-extracted proprietary files. Obtain the official update yourself and
-keep generated data local.
+このリポジトリには、Sony のファームウェア、復号済みバイナリ、カメラのバックアップ、
+シリアル番号、復号鍵、抽出したプロプライエタリファイルは意図的に含めていません。
+公式アップデートは各自で入手し、生成データはローカルに留めてください。
 
-All camera changes documented here operate on persisted backup
-properties, not a repacked firmware update. Test one property at a
-time and keep the original backup and hashes outside this repository.
+ここに記載するカメラ側の変更はすべて、再パックしたファームウェアではなく、
+永続化されたバックアッププロパティに対するものです。プロパティは1件ずつ検証し、
+元のバックアップとそのハッシュはこのリポジトリの外に保管してください。
