@@ -26,12 +26,15 @@ A7 IV の研究（`SYSIPSX-DSLR/LS` → `PRODUCT_MODEL_LS`）で実証済みの�
 
 次点の DZ / SP は imager が異なり、LS（A7 IV）はスロット数が異なる。
 
-### 残る注意点：CFexpress の表記
+### CFexpress について（訂正済み）
 
-`support_cfexpress` は PP では `NONE` だが、実際の A7C II のスロットは
-CFexpress Type A に対応する。この食い違いはシングルスロットの全クラスに
-共通するため、クラス判定の反証にはならない（このパラメータの意味付けが
-小売仕様と異なる可能性が高い）。意味の確定は今後の課題。
+`support_cfexpress` は PP では `NONE` で、これは実仕様と一致する：
+ILCE-7CM2 のシングルスロットは SD（UHS-I/II）専用で、
+CFexpress Type A には対応していない。
+（初期の解析メモでは「実機は CFexpress 対応」という誤った前提で
+食い違いとして扱っていたが、それは前提自体の誤りだった。訂正済み。）
+むしろこの値も PP 判定を支持する材料のひとつである
+（LS は `SLOT1` で、デュアルスロット機の値になっている）。
 
 ## マトリクスについて
 
