@@ -11,7 +11,7 @@ is reported with --constructors because it scans the whole .text section.
 Examples:
     python3 scripts/bkid_inventory.py APPFW --grep 'LOG_SHOOTING|LUT'
     python3 scripts/bkid_inventory.py APPFW --grep ANAMORPH \
-        --backup ~/Documents/Sony-PMCA-RE/a7iv-backup-602.bin \
+        --backup ~/Documents/Sony-PMCA-RE/a7cii-backup.bin \
         --update-root ~/Documents/fwtool.py/unpacked/firmware.tar_unpacked
 """
 

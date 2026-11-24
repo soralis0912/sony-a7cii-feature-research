@@ -1,5 +1,9 @@
 # Service mode and backup workflow
 
+> Status: **untested on ILCE-7CM2.** The workflow below is the procedure
+> to follow for the first physical-camera session; no backup from an
+> ILCE-7CM2 has been taken yet.
+
 ## Enter service mode
 
 ```bash
@@ -26,10 +30,10 @@ Copy the supplied helper into the PMCA repository or invoke it with that
 repository on `PYTHONPATH`:
 
 ```bash
-cp ~/Documents/sony-a7iv-feature-research/scripts/a7iv_read_backup.py \
+cp ~/Documents/sony-a7cii-feature-research/scripts/a7cii_read_backup.py \
   ~/Documents/Sony-PMCA-RE/
 cd ~/Documents/Sony-PMCA-RE
-sudo ./venv/bin/python ./a7iv_read_backup.py ./a7iv-backup-602.bin
+sudo ./venv/bin/python ./a7cii_read_backup.py ./a7cii-backup.bin
 ```
 
 The script refuses to overwrite an existing output. Keep the resulting file
@@ -38,12 +42,11 @@ private. It can contain per-camera state and identifiers.
 Record a second external hash if desired:
 
 ```bash
-shasum -a 256 ./a7iv-backup-602.bin
+shasum -a 256 ./a7cii-backup.bin
 ```
 
-The verified research backup was 2,369,436 bytes and parsed with a valid Sony
-BK4 checksum. Its hash is intentionally omitted because camera backups should
-not be published as reusable artifacts.
+Record the backup's size and SHA-256 locally. Camera backups can contain
+per-camera state and identifiers, so do not publish them as reusable artifacts.
 
 ## Apply one change at a time
 

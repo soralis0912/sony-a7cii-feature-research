@@ -1,5 +1,9 @@
 # Read-only live filesystem collection
 
+> Status: **untested on ILCE-7CM2.** The traversal behavior and the
+> constants below are the working hypothesis for the first session;
+> they have not been confirmed against ILCE-7CM2 hardware yet.
+
 ## Finding
 
 In service mode, Jiritsu command `SET_FILE_PATH` accepts a path containing
@@ -7,7 +11,7 @@ parent-directory components. `GET_FILE2` then returns the referenced file.
 The service constructs a path beneath `/tmp/jiritsu`; prefixing an absolute
 target with `../../` resolves back to the Linux root.
 
-The verified command constants are:
+The command constants to verify first on ILCE-7CM2 are:
 
 ```text
 category:      0x1001
@@ -23,10 +27,10 @@ write or delete camera files.
 Copy the probe into Sony-PMCA-RE:
 
 ```bash
-cp ~/Documents/sony-a7iv-feature-research/scripts/a7iv_jiritsu_readonly_probe.py \
+cp ~/Documents/sony-a7cii-feature-research/scripts/a7cii_jiritsu_readonly_probe.py \
   ~/Documents/Sony-PMCA-RE/
 cd ~/Documents/Sony-PMCA-RE
-sudo ./venv/bin/python ./a7iv_jiritsu_readonly_probe.py
+sudo ./venv/bin/python ./a7cii_jiritsu_readonly_probe.py
 ```
 
 It reads only:
@@ -35,11 +39,8 @@ It reads only:
 /usr/share/pmbp/DeviceInfo.xml
 ```
 
-For firmware 6.02 the file is 517 bytes and its SHA-256 is:
-
-```text
-e44713178fad970870ead845c93abdfcf150c418de11b306da91f2d09d67c1b7
-```
+On ILCE-7CM2, record the returned file's size and SHA-256 and compare
+them against the same path in the extracted Ver. 2.01 update.
 
 ## Update-backed collection
 
@@ -48,23 +49,24 @@ downloads only regular files represented there and checks every returned file
 against the update's size and SHA-256.
 
 ```bash
-cp ~/Documents/sony-a7iv-feature-research/scripts/a7iv_jiritsu_dump.py \
+cp ~/Documents/sony-a7cii-feature-research/scripts/a7cii_jiritsu_dump.py \
   ~/Documents/Sony-PMCA-RE/
 cd ~/Documents/Sony-PMCA-RE
-sudo ./venv/bin/python ./a7iv_jiritsu_dump.py \
+sudo ./venv/bin/python ./a7cii_jiritsu_dump.py \
   --fwtool-root ~/Documents/fwtool.py
 ```
 
 Use `--all` for all update-backed regular files:
 
 ```bash
-sudo ./venv/bin/python ./a7iv_jiritsu_dump.py \
+sudo ./venv/bin/python ./a7cii_jiritsu_dump.py \
   --fwtool-root ~/Documents/fwtool.py \
   --all
 ```
 
-The verified full manifest contained 1,064 files and 391,692,413 reference
-bytes. All 1,064 live files matched their independently extracted update bytes.
+The manifest is built from the extracted ILCE-7CM2 Ver. 2.01 update, so
+its file count and total size are whatever that update contains; record
+the numbers from the first successful run here.
 
 The output is resumable through `dump-index.jsonl`. Do not commit or upload the
 resulting Sony files.

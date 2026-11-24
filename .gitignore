@@ -15,7 +15,7 @@ unpacked/
 extracted/
 firmware*/
 live-dump*/
-a7iv-live-dump*/
+a7cii-live-dump*/
 dump-index.jsonl
 
 # Per-camera state and identifiers

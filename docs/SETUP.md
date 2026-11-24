@@ -1,34 +1,23 @@
-# Python and repository setup
+# セットアップ
 
-## Requirements
+## 要件
 
-- Sony ILCE-7M4 running firmware 6.02
-- A data-capable USB cable
-- Python 3; Python 3.9.6 is the version used for the verified macOS session
+- Sony ILCE-7CM2（ファームウェア Ver. 2.01 を対象とする）
+- データ転送可能な USB ケーブル
+- Python 3
 - Git
-- `libusb` and permission to access the USB device
-- The official Sony `BODYDATA.DAT` update file for offline extraction
+- `libusb` と、USB デバイスへアクセスする権限
+- オフライン展開用の公式 Sony `BODYDATA.DAT`（Ver. 2.01）
 
-## Clone this research repository
-
-SSH:
+## このリポジトリを取得
 
 ```bash
-git clone git@github.com:leogenot/sony-a7iv-feature-research.git
+git clone https://github.com/soralis0912/sony-a7cii-feature-research.git
 ```
 
-HTTPS:
+## Sony-PMCA-RE を取得
 
 ```bash
-git clone https://github.com/leogenot/sony-a7iv-feature-research.git
-```
-
-Because the repository is private, GitHub authentication is required.
-
-## Clone Sony-PMCA-RE
-
-```bash
-cd ~/Documents
 git clone https://github.com/ma1co/Sony-PMCA-RE.git
 cd Sony-PMCA-RE
 python3 -m venv venv
@@ -37,40 +26,41 @@ python -m pip install --upgrade pip
 python -m pip install -r requirements.txt
 ```
 
-On macOS, install `libusb` if it is missing:
+macOS で `libusb` が無ければ：
 
 ```bash
 brew install libusb
 ```
 
-The verified invocation on macOS was:
+サービスモードの起動（想定コマンド。ILCE-7CM2 実機では未検証）：
 
 ```bash
 sudo ./venv/bin/python ./pmca-console.py serviceshell
 ```
 
-## Clone the A7 IV fwtool branch
+## fwtool（A7C II 対応ブランチ）を取得
 
 ```bash
-cd ~/Documents
-git clone --branch a7iv https://github.com/DavidBuchanan314/fwtool.py.git
+git clone --branch a7cII https://github.com/soralis0912/fwtool.py.git
 cd fwtool.py
-python3 -m venv venv
-source venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python3 -m venv .venv
+source .venv/bin/activate
+python -m pip install pycryptodomex pyyaml
 ```
 
-Keep `Sony-PMCA-RE`, `fwtool.py`, and this repository as separate directories.
-Do not commit the update file, unpacked firmware or a camera backup.
+展開手順と検証済みの値は [FIRMWARE_EXTRACTION.md](FIRMWARE_EXTRACTION.md) を参照。
 
-## Camera preparation
+`Sony-PMCA-RE`、`fwtool.py`、このリポジトリは別々のディレクトリに置く。
+アップデートファイル、展開したファームウェア、カメラのバックアップは
+コミットしない。
 
-1. Charge the battery sufficiently for a service session.
-2. In the camera USB settings, select **Mass Storage**.
-3. Connect the camera directly to the computer.
-4. Close Photos and other applications that may claim the camera USB device.
-5. Start `serviceshell`. The expected transition is:
+## カメラ側の準備（実機作業時）
+
+1. サービスセッションに足るだけバッテリーを充電する。
+2. カメラの USB 設定で **マスストレージ** を選ぶ。
+3. カメラを PC に直接接続する。
+4. 写真アプリなど、カメラの USB デバイスを占有しうるアプリを閉じる。
+5. `serviceshell` を起動する。想定される遷移：
 
 ```text
 Sony DSC is a camera in mass storage mode
@@ -79,6 +69,8 @@ Found a camera in service mode
 Authenticating
 ```
 
-If the first attempt times out while the USB mode is changing, run the command
-again after the service-mode device appears.
+USB モード切替中にタイムアウトしたら、サービスモードのデバイスが
+現れてから再実行する。
 
+> 注意：上記の実機手順は ILCE-7CM2 ではまだ未検証。
+> 検証でき次第、このドキュメントを実測ベースに更新する。

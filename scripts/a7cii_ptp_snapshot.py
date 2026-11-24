@@ -7,7 +7,7 @@ import sys
 from datetime import datetime, timezone
 from pathlib import Path
 
-from a7iv_ptp_log_probe import (
+from a7cii_ptp_log_probe import (
     SONY_SDIO_CONNECT,
     SONY_SDIO_GET_EXT_DEVICE_INFO,
     SONY_GET_DEVICE_PROP_DESC,
@@ -41,7 +41,7 @@ def main():
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("a7iv-ptp-snapshot.json"),
+        default=Path("a7cii-ptp-snapshot.json"),
     )
     args = parser.parse_args()
     sys.path.insert(0, str(args.pmca_root.resolve()))

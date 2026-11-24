@@ -1,95 +1,49 @@
-# A7C II port — preparation notes
+# ILCE-7CM2 調査計画と進捗
 
-Status: **preparation only. Nothing in this document is verified on an
-A7C II yet.** Every A7 IV finding in this repository stays labelled as an
-A7 IV finding until it has been re-derived from A7C II firmware or tested
-on a physical A7C II.
+このリポジトリの対象は **ILCE-7CM2（A7C II）ファームウェア Ver. 2.01 のみ**。
+ここには ILCE-7CM2 自体のファームウェアと実機から得た値だけを記録する。
+他機種の値は持ち込まない。
 
-## Target
+## 対象
 
-| Item | A7 IV (base research) | A7C II (this port) |
-| --- | --- | --- |
-| Model | ILCE-7M4 | ILCE-7CM2 |
-| Firmware studied | 6.02 | Ver. 2.01 (Sony JP, 2025-11-11) |
-| Update file | `BODYDATA.DAT` | `BODYDATA.DAT` (~1.1 GB) |
-| SoC | CXD90057 (BIONZ XR) | CXD90057 (BIONZ XR) — same family |
-| FDAT model ID | `0x01030081` (verified, 6.02) | `0x20030014` (verified by unpacking 2.01) |
-| Crypter | `CXD90057_k8` (verified, 6.02) | `CXD90057_k8` (verified by unpacking 2.01) |
+| 項目 | 内容 |
+| --- | --- |
+| 型番 | ILCE-7CM2（A7C II） |
+| ファームウェア | Ver. 2.01（Sony、2025-11-11） |
+| アップデートファイル | `BODYDATA.DAT`、1,139,929,560 バイト、SHA-256 `eb4943e6099754d64deaef5047942e9bfe258f232d0b7bc39fa23b3cd10e1e31` |
+| SoC | CXD90057（BIONZ XR） |
+| FDAT モデル ID | `0x20030014`（unpack で確認済み） |
+| Crypter | `CXD90057_k8`（unpack で確認済み） |
 
-## Already prepared
+## 進捗
 
-- This repository was newly created using
-  `leogenot/sony-a7iv-feature-research` (base commit `1258245`, MIT)
-  as a template and reference — it is not a fork. See the "参考 /
-  Reference" section of the README.
-- Firmware unpacking: `soralis0912/fwtool.py`, branch `a7cII`, forked
-  from DavidBuchanan314's `a7iv` branch (`3955d78`). It already contains
-  the `CXD90057_k0` / `CXD90057_k8` crypters, and the upstream author
-  lists ILCE-7CM2 as tested-working for unpacking
-  (ma1co/fwtool.py PR #52).
-- Local workspace is cloned and runnable (venv with pycryptodomex +
-  pyyaml); see the fwtool repository.
+1. **完了（2026-11-24）— ファームウェア展開。**
+   公式 Ver. 2.01 `BODYDATA.DAT` を fwtool `a7cII` ブランチで unpack 成功。
+   model / version / region / crypter を記録し、`ILCE-7CM2` を fwtool fork の
+   `devices.yml` に追加した。詳細は [FIRMWARE_EXTRACTION.md](FIRMWARE_EXTRACTION.md)。
+   パーティション構成（`nflasha3/7/8/15`、`nflasha15_unpacked/lib/appFw.so`）も確認済み。
 
-## Expected to transfer (hypotheses, to verify)
+2. **次 — 製品クラスの特定。**
+   展開した ILCE-7CM2 の `appFw.so` を解析し、この機種の製品クラス文字列を
+   実物から特定する（`scripts/appfw_elf.py`、`scripts/feature_manager_matrix.py` を使用）。
 
-- The extraction flow in `docs/FIRMWARE_EXTRACTION.md`: fwtool unpack,
-  then the `nflasha3 / nflasha7 / nflasha8 / nflasha15` partition layout
-  and `lib/appFw.so` as the main application. Same SoC family and the
-  same update format make this plausible, not proven.
-- The offline analysis tools (`scripts/appfw_elf.py`,
-  `scripts/bkid_inventory.py`, `scripts/feature_manager_matrix.py`,
-  `scripts/analyze_feature_properties.py`) operate on generic AArch64
-  ELF / `BKID_APP_*` structures and are the first candidates for reuse
-  unchanged.
+3. **次 — サービスモードの読み取り専用テスト（実機）。**
+   PMCA で接続し、認証の可否を確認する。設定バックアップを取得し、
+   チェックサムが有効であることを検証する（`scripts/a7cii_read_backup.py`）。
 
-## Must NOT be carried over
+4. **その後 — プロパティ一覧の構築。**
+   ILCE-7CM2 のバックアップと `appFw.so` から `0x02cfXXXX` の対応表を
+   この機種のデータだけで作り直す（`scripts/bkid_inventory.py`、
+   `scripts/analyze_feature_properties.py`）。結果は `evidence/` に置く。
 
-- **Backup property IDs.** The `0x02cfXXXX` identifiers (121 references
-  across docs/scripts/evidence) were derived from the A7 IV 6.02
-  `appFw.so` plus an A7 IV backup. This includes the shutter-angle IDs
-  `0x02cf1702 / 0x02cf1704`, the custom-LUT ID `0x02cf1443` and the
-  de-squeeze candidate `0x02cf1bf2`. None of them may be written to an
-  A7C II until the inventory has been rebuilt from A7C II data.
-- **Product class.** "A7 IV runs as `PRODUCT_MODEL_LS`" is an A7 IV
-  result. The A7C II product class is unknown and decides which feature
-  gates (Log Shooting / Flexible ISO, LUT, menus) even apply.
-- **All Research status rows** in the README (service mode, settings
-  backup, decrypted filesystem read, shutter angle, custom LUT,
-  Open Gate, de-squeeze, XAVC S-I DCI 4K): each starts over as
-  *untested* for the A7C II.
-- **Service-mode authentication.** PMCA authenticated on the A7 IV;
-  whether the same flow authenticates an ILCE-7CM2 is untested.
-- **Model-specific names/defaults**: `scripts/a7iv_*` filenames and
-  defaults, `evidence/feature-manager-a7iv-602.json`, and every
-  "6.02" reference (40 across the repo).
+5. **最後 — 機能実験。**
+   シャッター角、カスタム LUT、デスクイーズ、オープンゲート等の候補を、
+   1プロパティずつ、バックアップと復旧手順を確保したうえで検証する。
 
-## Verification sequence
+## ルール
 
-1. ~~Unpack the official ILCE-7CM2 Ver. 2.01 `BODYDATA.DAT` with the
-   fwtool `a7cII` branch.~~ **Done 2026-11-24:** unpack succeeded —
-   model `0x20030014`, version `2.01`, region `0`, crypter
-   `CXD90057_k8`; source file 1,139,929,560 bytes, SHA-256
-   `eb4943e6099754d64deaef5047942e9bfe258f232d0b7bc39fa23b3cd10e1e31`
-   (official Sony JP download). `ILCE-7CM2` was added to `devices.yml`
-   in the fwtool fork (branch `a7cII`, commit `dd4def0`). The expected
-   partition layout (`nflasha3/7/8/15`, `lib/appFw.so`) was present.
-2. Confirm the partition layout and hash-match the extracted files
-   against the update, as was done for the A7 IV.
-3. Determine the A7C II product class from its own `appFw.so`
-   (`docs/PRODUCT_CLASS.md` method, A7C II inputs).
-4. Test PMCA service mode read-only; save a checksum-valid settings
-   backup before any experiment.
-5. Rebuild the full property inventory from the A7C II backup +
-   `appFw.so`; only then compare against the A7 IV inventory.
-6. Port feature experiments one at a time, in the base repo's order,
-   re-verifying each on hardware before updating any status table.
-
-## Safety and repository policy (inherited, unchanged)
-
-- No Sony firmware, decrypted binaries, camera backups, serial numbers,
-  decryption keys or extracted proprietary files in this repository.
-  Obtain the official update yourself and keep generated data local.
-- Camera changes operate on persisted backup properties, not a
-  repacked firmware update. Test one property at a time and keep the
-  original backup and its hashes outside this repository.
-- Use at your own risk.
+- 記録する値はすべて ILCE-7CM2 の 2.01 ファームウェアまたは実機由来に限る。
+- ファームウェア本体、復号済みバイナリ、カメラのバックアップ、シリアル番号、
+  復号鍵はこのリポジトリに置かない。
+- カメラ側の変更は永続化バックアッププロパティに対してのみ行い、
+  1件ずつ検証する。

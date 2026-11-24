@@ -1,81 +1,50 @@
-# Firmware extraction
+# ファームウェア展開（ILCE-7CM2 Ver. 2.01・検証済み）
 
-## Unpack the official update
+## 公式アップデートファイル
 
-Place Sony's A7 IV `BODYDATA.DAT` in the local `fwtool.py` directory. With the
-`a7iv` branch and dependencies active:
+| 項目 | 内容 |
+| --- | --- |
+| ファイル名 | `BODYDATA.DAT` |
+| サイズ | 1,139,929,560 バイト（Sony 公表値と一致） |
+| SHA-256 | `eb4943e6099754d64deaef5047942e9bfe258f232d0b7bc39fa23b3cd10e1e31` |
+| 入手元 | Sony 公式サポート（ILCE-7CM2、Ver. 2.01、2025-11-11 公開） |
+
+## unpack
+
+[soralis0912/fwtool.py](https://github.com/soralis0912/fwtool.py/tree/a7cII)
+の `a7cII` ブランチを使う。依存は `pycryptodomex` と `pyyaml` のみ。
 
 ```bash
-cd ~/Documents/fwtool.py
-source venv/bin/activate
-python ./fwtool.py unpack -f ./BODYDATA.DAT -o ./unpacked
+cd fwtool.py   # branch: a7cII
+python fwtool.py unpack -f BODYDATA.DAT -o unpacked
 ```
 
-For the verified 6.02 package, fwtool identifies:
+2026-11-24 に検証済み。fwtool の報告値：
 
 ```text
-model:   0x01030081
-version: 6.02
+model:   0x20030014
+version: 2.01
+region:  0
 crypter: CXD90057_k8
 ```
 
-The main research targets are:
+この結果を受けて、`ILCE-7CM2`（arch `CXD90057`、model `0x20030014`）を
+fwtool fork の `devices.yml` に追加済み（`a7cII` ブランチ、commit `dd4def0`）。
+
+なお CXD90057 では fwtool の暗号化（pack）は未実装
+（`Encryption not supported`）のため、展開は読み取り専用である。
+
+## 展開後の構成
+
+主な調査対象：
 
 ```text
 unpacked/firmware.tar_unpacked/0700_part_image/dev/
-  nflasha3_unpacked/    /system
-  nflasha7_unpacked/    root filesystem
-  nflasha8_unpacked/    /cp coprocessor files
-  nflasha15_unpacked/   /usr application files
+  nflasha3   (initrd 等)
+  nflasha7
+  nflasha8
+  nflasha15  → nflasha15_unpacked/lib/appFw.so（メインアプリ、約96 MB）
 ```
 
-The main camera application is:
-
-```text
-nflasha15_unpacked/lib/appFw.so
-```
-
-The update contains substantial replacement filesystem images. It is not a
-full backup of every live partition or device-specific setting.
-
-## Offline property analysis
-
-Run the analyzer against `appFw.so` and a private service backup:
-
-```bash
-cd ~/Documents/sony-a7iv-feature-research
-python3 ./scripts/analyze_feature_properties.py \
-  ~/Documents/fwtool.py/unpacked/firmware.tar_unpacked/0700_part_image/dev/nflasha15_unpacked/lib/appFw.so \
-  --backup ~/Documents/Sony-PMCA-RE/a7iv-backup-602.bin \
-  --pmca-root ~/Documents/Sony-PMCA-RE
-```
-
-The output resolves named `BKID_APP_*` records to service property IDs and
-shows the AArch64 constructor addresses that build each complete
-`0x02cfXXXX` identifier.
-
-## Product matrix and full property inventory
-
-`feature_manager_matrix.py` decodes the per-product feature-manager tables.
-`bkid_inventory.py` resolves every `BKID_APP_*` name record and can join it to
-a private backup and the 32 regional profiles:
-
-```bash
-A7=~/Documents/fwtool.py/unpacked/firmware.tar_unpacked/0700_part_image/dev/nflasha15_unpacked/lib/appFw.so
-python3 ./scripts/feature_manager_matrix.py "$A7" --diff-only
-python3 ./scripts/bkid_inventory.py "$A7" --grep SQUEEZE --constructors \
-  --backup ~/Documents/Sony-PMCA-RE/a7iv-backup-602.bin \
-  --update-root ~/Documents/fwtool.py/unpacked/firmware.tar_unpacked
-```
-
-`appfw_elf.py` provides the shared relocation, name-record, immediate and
-`ADRP` reference helpers, and a small command-line interface. `bk4.py` is a
-dependency-free BK4 reader that verifies checksums and reads both banks.
-
-## Compare against an enabled camera
-
-FX3 7.02 was used as a positive reference because Sony exposes shutter angle
-and User1–User16 LUT import on that camera. Its extracted `libSysDef.so`
-contains the same `MIRA_CETUS2` platform identifier as the A7 IV. Physical
-backup property numbers are not assumed to match across models.
-
+展開ツリー全体は約3.9 GB。ファームウェア本体・展開物はこのリポジトリに
+含めない（各自で公式アップデートを入手し、ローカルに保持すること）。

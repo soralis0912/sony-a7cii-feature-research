@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Read one fixed A7 IV 6.02 file through the Jiritsu traversal behavior."""
+"""Read one fixed ILCE-7CM2 file through the Jiritsu traversal behavior."""
 
 import hashlib
 import struct
@@ -48,7 +48,7 @@ def probe(camera):
     digest = hashlib.sha256(payload).hexdigest()
     print("SHA256: %s" % digest)
     print(
-        "Matches extracted 6.02 file: %s"
+        "Matches extracted firmware file: %s"
         % ("yes" if digest == EXPECTED_SHA256_602 else "no")
     )
     print(payload.decode("utf-8", errors="replace").rstrip())

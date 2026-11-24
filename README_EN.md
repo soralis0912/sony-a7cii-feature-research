@@ -8,10 +8,10 @@ Reproducible notes and tools for studying Sony **ILCE-7CM2** (A7C II)
 firmware **Ver. 2.01** through official update files and Sony's USB
 service mode.
 
-> **Status: preparation only.** Nothing has been verified on an
-> A7C II yet. See [docs/A7CII_PREP.md](docs/A7CII_PREP.md) for the
-> target definition, what may transfer from the A7 IV research, what
-> must be re-derived, and the verification sequence.
+> **Status: firmware unpacking verified; physical-camera work
+> (service mode etc.) not yet tested.** See
+> [docs/A7CII_PREP.md](docs/A7CII_PREP.md) for the target definition
+> and the research plan and progress.
 
 ## Reference
 
@@ -24,12 +24,10 @@ are based on that work; all A7 IV findings credited there belong to
 the original author. The original is MIT-licensed, and its copyright
 notice is retained in [LICENSE](LICENSE).
 
-Every A7 IV result inherited through the template — backup property
-IDs (`0x02cfXXXX`), the `PRODUCT_MODEL_LS` product-class conclusion,
-service-mode authentication, and all feature statuses — is an A7 IV
-result only. For the A7C II each of them starts over as *untested*
-until re-derived from ILCE-7CM2 firmware or tested on physical
-ILCE-7CM2 hardware.
+All values recorded in this repository come from ILCE-7CM2 firmware
+or hardware only. The other model's findings documents that came with
+the template have been removed, and the content is being replaced
+with ILCE-7CM2 material.
 
 ## Target
 
@@ -38,7 +36,7 @@ ILCE-7CM2 hardware.
 | Model | ILCE-7CM2 (A7C II) |
 | Firmware | Ver. 2.01 (Sony JP, 2025-11-11) |
 | Update file | `BODYDATA.DAT` (~1.1 GB, official Sony download) |
-| SoC | CXD90057 (BIONZ XR), same family as ILCE-7M4 |
+| SoC | CXD90057 (BIONZ XR) |
 | FDAT model ID | `0x20030014` (verified by unpacking 2.01) |
 | Crypter | `CXD90057_k8` (verified by unpacking 2.01) |
 
@@ -51,7 +49,7 @@ ILCE-7CM2 hardware.
 | Settings backup | Untested |
 | Decrypted filesystem read | Untested |
 | Product class | Unknown — to be determined from ILCE-7CM2 `appFw.so` |
-| Shutter angle / Custom LUT / De-Squeeze / Open Gate | Untested — A7 IV property IDs must not be reused |
+| Shutter angle / Custom LUT / De-Squeeze / Open Gate | Untested — property IDs from other models must not be reused |
 
 ## Upstream and related projects
 
@@ -68,12 +66,12 @@ ILCE-7CM2 hardware.
 ## Repository layout
 
 ```
-docs/       Setup, extraction, service-mode and feature procedures
-            (inherited from the template; A7 IV values are marked in
-            docs/A7CII_PREP.md and must be re-derived)
-scripts/    Read-only backup/dump and offline property-analysis tools
+docs/       Setup, extraction (verified), service-mode and live
+            filesystem-read procedures, and the research plan
+scripts/    Read-only backup/dump and offline property-analysis
+            tools (renamed to a7cii_*)
 evidence/   Sanitized property mappings and verification record
-            (currently the template's A7 IV 6.02 data, for comparison)
+            (to be added once ILCE-7CM2 data exists)
 ```
 
 This repository intentionally contains no Sony firmware, decrypted

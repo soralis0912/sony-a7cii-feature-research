@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Resumable read-only collector for update-backed A7 IV 6.02 files."""
+"""Resumable read-only collector for update-backed ILCE-7CM2 files."""
 
 import argparse
 import hashlib
@@ -229,7 +229,7 @@ def main():
     parser.add_argument(
         "--output",
         type=Path,
-        default=Path("a7iv-live-dump-602"),
+        default=Path("a7cii-live-dump"),
     )
     args = parser.parse_args()
 
