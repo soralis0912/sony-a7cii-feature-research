@@ -67,26 +67,73 @@
 BK4 チェックサム検証（D）、CFexpress の訂正（E）。
 
 **残っているのは C（プロパティ変更の実験）だけ。**
+加えて、B が開けた Jiritsu 経路の読み取り範囲を広げる作業が新しく生えた（下記）。
 
-## B が通ったことの意味（2026-11-24）
+## B が通ったことの意味（2026-11-24、訂正済み）
 
-Jiritsu は Senser プロトコルの `0xff00` TestMode 経由で、
-`libsencore.so` のディスパッチテーブルを読むと **`0xff00` は
-`pFunc_level_A` にしか無い**（レベル B は `0x40`/`0x10`/`0x20`、
-レベル C は `0x40` のみ）。
-B のプローブが `status 0` で通ったということは、**この機体の認証は
-レベル A に到達している**ということになる。
+**訂正**：いちど「Jiritsu は `0xff00` TestMode 経由なので、通った＝
+サービス権限レベル A」と書いたが、これは誤り。
+`scripts/a7cii_jiritsu_readonly_probe.py` が使っているのは
+`_sendAdjustControlPacket`、すなわち **PFUNC `0x40` AdjustControl** で、
+これは `libsencore.so` の3つのディスパッチテーブル（A / B / C）**すべて**に
+入っている。したがって B が通ったことから権限レベルは分からない。
 
-同じコードが `terminal_change_function_is_disabled = (level != 3)` を
-設定するので、レベル A なら**サービス USB 端末のゲートが開いている**。
-つまり PMCA の `serviceshell` → `shell` で、カメラに何も書き込まずに
-root コンソール（通常起動の initrd が回している `ash --login`）に
-繋がる見込みが高い。
+IDA で確認した `AdjustControlFunc` の中身は、受け取ったカテゴリ／コマンドを
+`SubsystemCommunicationCommand::TransactionStart` でサブシステムへ転送する形。
+Jiritsu はそのサブシステムの1つで、カテゴリ **`0x1001`**。
+`TestMode`（`0xff00`）は別経路（`HostCommunicationCommand`）で、
+こちらは確かにレベル A のテーブルにしか無い。
 
-これは静的解析からの**推論**で、ゲートのバイトを直接見たわけではない。
-確かめ方と、その先の手順は派生リポジトリ
+### 実際に分かったこと（こちらのほうが価値がある）
+
+B が通った＝**この機体で Jiritsu のカテゴリ `0x1001` が通る**。
+同じカテゴリに**書き込み系コマンドも定義されている**（下表）。
+つまり、権限レベル A を取らなくても、ファイルの読み書きが届く可能性がある。
+
+全18コマンドを `libsencore.so` の定義表から抽出した
+（`scripts/jiritsu_commands.py`、
+[evidence/jiritsu-commands-a7cii-201.json](evidence/jiritsu-commands-a7cii-201.json)）。
+コマンド／カテゴリはレコード内の u32 から直接読んだもので、順序からの推測ではない。
+うち `0x400f` と `0x4011` は B の実測で裏が取れている。
+
+| コマンド | 名前 | 性質 |
+| --- | --- | --- |
+| `0x4001` | MODE | 状態変更 |
+| `0x4002` | MOUNT | 状態変更 |
+| `0x4003` | FORMAT | **破壊的** |
+| `0x4004` | START | 状態変更 |
+| `0x4005` | DEBUG | 状態変更 |
+| `0x4006` | FIRMUP | **破壊的** |
+| `0x4007` | SET_FILE | **書き込み** |
+| `0x4008` | GET_FILE | 読み取り |
+| `0x4009` | FILE_DELETE | **破壊的** |
+| `0x400a` | GET_FILELIST | 読み取り |
+| `0x400b` | GET_FILE_HASH | 読み取り |
+| `0x400c` | COMPARE_MEDIA | 状態変更 |
+| `0x400d` | GET_VERSION | 読み取り |
+| `0x400e` | FACTORY | 状態変更 |
+| `0x400f` | SET_FILE_PATH | 読み取り（パス選択。**実測済み**） |
+| `0x4010` | SET_FILE2 | **書き込み** |
+| `0x4011` | GET_FILE2 | 読み取り（**実測済み**） |
+| `0x4012` | FILE_DELETE2 | **破壊的** |
+
+カテゴリはすべて `0x1001`、コマンドは `0x4001`〜`0x4012` の連番。
+
+### 次に意味があること
+
+1. **読み取りの範囲を広げる**（破壊性ゼロ）。`SET_FILE_PATH` + `GET_FILE2` は
+   `../../` でルートへ抜けられるので、`/etc/ssh/sshd_config`、
+   `/etc/nsswitch.conf`、`/etc/passwd`、`/setting/ulogio.bin` を読める見込み。
+   これらはアップデートパッケージに入っていない（nflasha10 / nflasha2）ので、
+   **読めれば静的解析では埋まらない穴が埋まる**。
+2. `GET_FILELIST`（`0x400a`）と `GET_FILE_HASH`（`0x400b`）も読み取り専用。
+3. **書き込みは `/tmp_wbshd` など揮発領域から**。`SET_FILE` / `SET_FILE2` の
+   引数形式は未確認で、`FORMAT` / `FIRMUP` / `FILE_DELETE` が同じ番号帯に
+   並んでいるので、コマンド番号の打ち間違いは危険。
+
+手順は派生リポジトリ
 [sony-a7cii-shell-access](https://github.com/soralis0912/sony-a7cii-shell-access)
-（`scripts/survey_readonly.py`、`docs/FIELD_SESSION.md`）にまとめた。
+の `docs/FIELD_SESSION.md` に反映する。
 
 ## A. ファームウェア版数の確認【完了】
 

@@ -1,0 +1,114 @@
+{
+  "library": "/Users/masayoshimatsubara/git/a7c2/fwtool.py/unpacked/firmware.tar_unpacked/0700_part_image/dev/nflasha15_unpacked/lib/libsencore.so",
+  "sha256": "3362d4b6e03dc517b04f1eb04d4199ff16d33f6e8f1bfddce657a375778d79e7",
+  "commands": [
+    {
+      "command": "0x4001",
+      "category": "0x1001",
+      "name": "MODE",
+      "name_offset": "0x32fdb"
+    },
+    {
+      "command": "0x4002",
+      "category": "0x1001",
+      "name": "MOUNT",
+      "name_offset": "0x33023"
+    },
+    {
+      "command": "0x4003",
+      "category": "0x1001",
+      "name": "FORMAT",
+      "name_offset": "0x3306b"
+    },
+    {
+      "command": "0x4004",
+      "category": "0x1001",
+      "name": "START",
+      "name_offset": "0x330b3"
+    },
+    {
+      "command": "0x4005",
+      "category": "0x1001",
+      "name": "DEBUG",
+      "name_offset": "0x330fb"
+    },
+    {
+      "command": "0x4006",
+      "category": "0x1001",
+      "name": "FIRMUP",
+      "name_offset": "0x33143"
+    },
+    {
+      "command": "0x4007",
+      "category": "0x1001",
+      "name": "SET_FILE",
+      "name_offset": "0x3318b"
+    },
+    {
+      "command": "0x4008",
+      "category": "0x1001",
+      "name": "GET_FILE",
+      "name_offset": "0x331d3"
+    },
+    {
+      "command": "0x4009",
+      "category": "0x1001",
+      "name": "FILE_DELETE",
+      "name_offset": "0x3321b"
+    },
+    {
+      "command": "0x400a",
+      "category": "0x1001",
+      "name": "GET_FILELIST",
+      "name_offset": "0x33263"
+    },
+    {
+      "command": "0x400b",
+      "category": "0x1001",
+      "name": "GET_FILE_HASH",
+      "name_offset": "0x332ab"
+    },
+    {
+      "command": "0x400c",
+      "category": "0x1001",
+      "name": "COMPARE_MEDIA",
+      "name_offset": "0x332f3"
+    },
+    {
+      "command": "0x400d",
+      "category": "0x1001",
+      "name": "GET_VERSION",
+      "name_offset": "0x3333b"
+    },
+    {
+      "command": "0x400e",
+      "category": "0x1001",
+      "name": "FACTORY",
+      "name_offset": "0x33383"
+    },
+    {
+      "command": "0x400f",
+      "category": "0x1001",
+      "name": "SET_FILE_PATH",
+      "name_offset": "0x333cb"
+    },
+    {
+      "command": "0x4010",
+      "category": "0x1001",
+      "name": "SET_FILE2",
+      "name_offset": "0x33413"
+    },
+    {
+      "command": "0x4011",
+      "category": "0x1001",
+      "name": "GET_FILE2",
+      "name_offset": "0x3345b"
+    },
+    {
+      "command": "0x4012",
+      "category": "0x1001",
+      "name": "FILE_DELETE2",
+      "name_offset": "0x334a3"
+    }
+  ]
+}

@@ -14,13 +14,29 @@ parent-directory components. `GET_FILE2` then returns the referenced file.
 The service constructs a path beneath `/tmp/jiritsu`; prefixing an absolute
 target with `../../` resolves back to the Linux root.
 
-The command constants to verify first on ILCE-7CM2 are:
+The command constants, read out of the definition table in
+`libsencore.so` by `scripts/jiritsu_commands.py` (not guessed from ordering —
+each record holds a little-endian u32 of `(command << 16) | category`):
 
 ```text
-category:      0x1001
-SET_FILE_PATH: 0x400f
-GET_FILE2:     0x4011
+category: 0x1001   (every command)
+0x4001 MODE           0x4002 MOUNT          0x4003 FORMAT
+0x4004 START          0x4005 DEBUG          0x4006 FIRMUP
+0x4007 SET_FILE       0x4008 GET_FILE       0x4009 FILE_DELETE
+0x400a GET_FILELIST   0x400b GET_FILE_HASH  0x400c COMPARE_MEDIA
+0x400d GET_VERSION    0x400e FACTORY        0x400f SET_FILE_PATH
+0x4010 SET_FILE2      0x4011 GET_FILE2      0x4012 FILE_DELETE2
 ```
+
+`0x400f` and `0x4011` are confirmed by the probe that ran on hardware.
+The rest come from the same table and are not verified on a camera. Note what
+sits next to them: `FORMAT`, `FIRMUP`, `FILE_DELETE` and `FILE_DELETE2` are
+destructive, so a mistyped command number is not a harmless experiment.
+
+Jiritsu is reached through PFUNC `0x40` AdjustControl, which `libsencore.so`
+lists in all three service dispatch tables (levels A, B and C). A working
+Jiritsu call therefore says nothing about the privilege level; `TestMode`
+(`0xff00`), which is level A only, is a different path.
 
 The included tools issue only path-selection and read commands. They do not
 write or delete camera files.
