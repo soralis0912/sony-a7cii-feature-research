@@ -48,8 +48,8 @@ with ILCE-7CM2 material.
 | Service mode | Untested on ILCE-7CM2 |
 | Settings backup | Untested |
 | Decrypted filesystem read | Untested |
-| Product class | Unknown — to be determined from ILCE-7CM2 `appFw.so` |
-| Shutter angle / Custom LUT / De-Squeeze / Open Gate | Untested — property IDs from other models must not be reused |
+| Product class | Analyzed — 26-class matrix decoded; which class the camera runs needs hardware (docs/PRODUCT_CLASS.md) |
+| Shutter angle / Custom LUT / De-Squeeze | Property IDs identified from ILCE-7CM2 firmware (docs/FEATURE_INVENTORY.md); on-camera change tests not yet done |
 
 ## Upstream and related projects
 

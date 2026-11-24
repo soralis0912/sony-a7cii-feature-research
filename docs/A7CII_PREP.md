@@ -23,22 +23,27 @@
    `devices.yml` に追加した。詳細は [FIRMWARE_EXTRACTION.md](FIRMWARE_EXTRACTION.md)。
    パーティション構成（`nflasha3/7/8/15`、`nflasha15_unpacked/lib/appFw.so`）も確認済み。
 
-2. **次 — 製品クラスの特定。**
-   展開した ILCE-7CM2 の `appFw.so` を解析し、この機種の製品クラス文字列を
-   実物から特定する（`scripts/appfw_elf.py`、`scripts/feature_manager_matrix.py` を使用）。
+2. **解析済み（2026-11-24）— 製品クラスの候補抽出。**
+   feature manager のマトリクス（26クラス／39パラメータ）をデコードした。
+   ただし ILCE-7CM2 自身のクラスはファームウェアだけでは確定しない
+   （詳細： [PRODUCT_CLASS.md](PRODUCT_CLASS.md)）。確定は実機タスク
+   （[TODO.md](../TODO.md)）で行う。
 
-3. **次 — サービスモードの読み取り専用テスト（実機）。**
+3. **実機待ち — サービスモードの読み取り専用テスト。**
    PMCA で接続し、認証の可否を確認する。設定バックアップを取得し、
    チェックサムが有効であることを検証する（`scripts/a7cii_read_backup.py`）。
 
-4. **その後 — プロパティ一覧の構築。**
-   ILCE-7CM2 のバックアップと `appFw.so` から `0x02cfXXXX` の対応表を
-   この機種のデータだけで作り直す（`scripts/bkid_inventory.py`、
-   `scripts/analyze_feature_properties.py`）。結果は `evidence/` に置く。
+4. **完了（2026-11-24）— プロパティ一覧の構築。**
+   ILCE-7CM2 の `appFw.so` から `0x02cfXXXX` の対応表（全6,450件）と
+   地域プロファイルのデフォルト値を抽出し、`evidence/` に置いた。
+   主要プロパティの抜粋は [FEATURE_INVENTORY.md](FEATURE_INVENTORY.md)。
+   実機バックアップとの突き合わせは実機タスク側で残っている。
 
-5. **最後 — 機能実験。**
-   シャッター角、カスタム LUT、デスクイーズ、オープンゲート等の候補を、
-   1プロパティずつ、バックアップと復旧手順を確保したうえで検証する。
+5. **実機待ち — 機能実験。**
+   シャッター角、カスタム LUT、デスクイーズ等の候補（ID は
+   FEATURE_INVENTORY に特定済み）を、1プロパティずつ、
+   バックアップと復旧手順を確保したうえで検証する。
+   実機が必須の残作業は [TODO.md](../TODO.md) に集約した。
 
 ## ルール
 

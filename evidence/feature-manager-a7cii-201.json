@@ -1,0 +1,4467 @@
+{
+ "products": {
+  "0": "LS",
+  "1": "YT",
+  "2": "GL",
+  "3": "LAX",
+  "4": "ALCIN_UUD",
+  "5": "SA",
+  "6": "DZ",
+  "7": "YS",
+  "8": "OS",
+  "9": "PP",
+  "10": "SP",
+  "11": "ATOM",
+  "12": "TAKE_BASIC",
+  "13": "HARRY",
+  "14": "POTTER",
+  "15": "EREN",
+  "16": "CHAPLIN",
+  "17": "LUKE",
+  "18": "ALCIN2",
+  "19": "TK_UUD",
+  "20": "OT_UUD",
+  "21": "NE",
+  "22": "HC",
+  "23": "RS",
+  "24": "MT",
+  "25": "DOC"
+ },
+ "feature_index": {
+  "0": 25,
+  "1": 21,
+  "2": 22,
+  "3": 24,
+  "4": 23,
+  "5": 20,
+  "6": 19,
+  "7": 18,
+  "8": 17,
+  "9": 16,
+  "10": 15,
+  "11": 14,
+  "12": 13,
+  "13": 12,
+  "14": 11,
+  "15": 10,
+  "16": 9,
+  "17": 8,
+  "18": 7,
+  "19": 6,
+  "20": 5,
+  "21": 4,
+  "22": 3,
+  "23": 2,
+  "24": 1,
+  "25": 0
+ },
+ "rows": [
+  {
+   "prm_id": 0,
+   "name": "PRM_FEATURE_MANAGER_camera_parameters",
+   "getter": "0x1797d5c",
+   "table": "0x370e110",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_CAMERA_PARAMETERS_LS"
+    },
+    "YT": {
+     "value": 4,
+     "label": null
+    },
+    "GL": {
+     "value": 3,
+     "label": null
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_CAMERA_PARAMETERS_LAX"
+    },
+    "ALCIN_UUD": {
+     "value": 2,
+     "label": "TYPE_CAMERA_PARAMETERS_ALCIN_UUD"
+    },
+    "SA": {
+     "value": 5,
+     "label": null
+    },
+    "DZ": {
+     "value": 6,
+     "label": null
+    },
+    "YS": {
+     "value": 7,
+     "label": null
+    },
+    "OS": {
+     "value": 8,
+     "label": null
+    },
+    "PP": {
+     "value": 9,
+     "label": null
+    },
+    "SP": {
+     "value": 10,
+     "label": null
+    },
+    "ATOM": {
+     "value": 11,
+     "label": null
+    },
+    "TAKE_BASIC": {
+     "value": 12,
+     "label": null
+    },
+    "HARRY": {
+     "value": 12,
+     "label": null
+    },
+    "POTTER": {
+     "value": 12,
+     "label": null
+    },
+    "EREN": {
+     "value": 12,
+     "label": null
+    },
+    "CHAPLIN": {
+     "value": 12,
+     "label": null
+    },
+    "LUKE": {
+     "value": 12,
+     "label": null
+    },
+    "ALCIN2": {
+     "value": 12,
+     "label": null
+    },
+    "TK_UUD": {
+     "value": 13,
+     "label": null
+    },
+    "OT_UUD": {
+     "value": 14,
+     "label": null
+    },
+    "NE": {
+     "value": 15,
+     "label": null
+    },
+    "HC": {
+     "value": 16,
+     "label": null
+    },
+    "RS": {
+     "value": 17,
+     "label": null
+    },
+    "MT": {
+     "value": 18,
+     "label": null
+    },
+    "DOC": {
+     "value": 19,
+     "label": null
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 1,
+   "name": "PRM_FEATURE_MANAGER_imager_model",
+   "getter": "0x1797f84",
+   "table": "0x370d6e8",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_IMAGER_MODEL_IMX710"
+    },
+    "YT": {
+     "value": 2,
+     "label": "TYPE_IMAGER_MODEL_IMX223"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_IMAGER_MODEL_IMX451"
+    },
+    "LAX": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "ALCIN_UUD": {
+     "value": 3,
+     "label": "TYPE_IMAGER_MODEL_IMX510"
+    },
+    "SA": {
+     "value": 3,
+     "label": "TYPE_IMAGER_MODEL_IMX510"
+    },
+    "DZ": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "YS": {
+     "value": 2,
+     "label": "TYPE_IMAGER_MODEL_IMX223"
+    },
+    "OS": {
+     "value": 5,
+     "label": "TYPE_IMAGER_MODEL_IMX810"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_IMAGER_MODEL_IMX710"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_IMAGER_MODEL_IMX451"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_IMAGER_MODEL_IMX451"
+    },
+    "TAKE_BASIC": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "HARRY": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "POTTER": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "EREN": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "CHAPLIN": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "LUKE": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "ALCIN2": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "TK_UUD": {
+     "value": 6,
+     "label": "TYPE_IMAGER_MODEL_IMX610"
+    },
+    "OT_UUD": {
+     "value": 3,
+     "label": "TYPE_IMAGER_MODEL_IMX510"
+    },
+    "NE": {
+     "value": 4,
+     "label": "TYPE_IMAGER_MODEL_IMX684"
+    },
+    "HC": {
+     "value": 6,
+     "label": "TYPE_IMAGER_MODEL_IMX610"
+    },
+    "RS": {
+     "value": 7,
+     "label": "TYPE_IMAGER_MODEL_IMX910"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_IMAGER_MODEL_IMX451"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_IMAGER_MODEL_IMX710"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 2,
+   "name": "PRM_FEATURE_MANAGER_shoot_mode_switch",
+   "getter": "0x1797e04",
+   "table": "0x370e2b0",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "YT": {
+     "value": 4,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_TOGGLE"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "LAX": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "ALCIN_UUD": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "SA": {
+     "value": 2,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_LEVER"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "YS": {
+     "value": 4,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_TOGGLE"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "ATOM": {
+     "value": 2,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_LEVER"
+    },
+    "TAKE_BASIC": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "HARRY": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "POTTER": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "EREN": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "CHAPLIN": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "LUKE": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "ALCIN2": {
+     "value": 5,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_BUTTON_DIAL_GUIDE"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL"
+    },
+    "NE": {
+     "value": 2,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_LEVER"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL_MODE_LEVER"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_DIAL"
+    },
+    "DOC": {
+     "value": 3,
+     "label": "TYPE_SHOOT_MODE_SWITCH_BY_MODE_SLIKEY_MOVIE_STILL"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 3,
+   "name": "PRM_FEATURE_MANAGER_lens_mount",
+   "getter": "0x1797e64",
+   "table": "0x370d0d0",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_LENS_MOUNT_FIXED"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_LENS_MOUNT_INTERCHANGEABLE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 4,
+   "name": "PRM_FEATURE_MANAGER_exclusive_when_high_sensitivity_nr_set_to_raw",
+   "getter": "0x179847c",
+   "table": "0x370fc48",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_EXCLUSION"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_EXCLUSION"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_EXCLUSION"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_EXCLUSION"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_EXCLUSION"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_EXCLUSION"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_WHEN_HIGH_SENSITIVITY_NR_SET_TO_RAW_NO_EXCLUSION"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 5,
+   "name": "PRM_FEATURE_MANAGER_animal_eye_af_phase_2_0",
+   "getter": "0x17980bc",
+   "table": "0x370ef48",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_NOT_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_PHASE_2_0_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 6,
+   "name": "PRM_FEATURE_MANAGER_animal_eye_af_in_movie",
+   "getter": "0x17980d4",
+   "table": "0x370ed40",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_NOT_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_NOT_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_ANIMAL_EYE_AF_IN_MOVIE_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 7,
+   "name": "PRM_FEATURE_MANAGER_eye_face_af_gen_type",
+   "getter": "0x17980ec",
+   "table": "0x370e790",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_2"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_EYE_FACE_AF_GEN_TYPE_4"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 8,
+   "name": "PRM_FEATURE_MANAGER_af_tracking_continuity",
+   "getter": "0x179814c",
+   "table": "0x370ecd8",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_NOT_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_AF_TRACKING_CONTINUITY_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 9,
+   "name": "PRM_FEATURE_MANAGER_electronic_shutter",
+   "getter": "0x1798134",
+   "table": "0x370e3e8",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "YT": {
+     "value": 3,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ANTI_DISTORTION"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "YS": {
+     "value": 3,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ANTI_DISTORTION"
+    },
+    "OS": {
+     "value": 2,
+     "label": "TYPE_ELECTRONIC_SHUTTER_GLOBAL_SHUTTER"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "TK_UUD": {
+     "value": 3,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ANTI_DISTORTION"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "HC": {
+     "value": 3,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ANTI_DISTORTION"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_ELECTRONIC_SHUTTER_ROLLING_SHUTTER"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 10,
+   "name": "PRM_FEATURE_MANAGER_num_of_media_slot",
+   "getter": "0x1797da4",
+   "table": "0x370e178",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_SINGLE"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_NUM_OF_MEDIA_SLOT_DOUBLE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 11,
+   "name": "PRM_FEATURE_MANAGER_product_concept",
+   "getter": "0x17981dc",
+   "table": "0x370dd68",
+   "values": {
+    "LS": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_PRODUCT_CONCEPT_VLOGCAM"
+    },
+    "GL": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_PRODUCT_CONCEPT_CINEMA_LINE"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_PRODUCT_CONCEPT_CINEMA_LINE"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_PRODUCT_CONCEPT_VLOGCAM"
+    },
+    "DZ": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_PRODUCT_CONCEPT_VLOGCAM"
+    },
+    "OS": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "PP": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "SP": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "ATOM": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "TAKE_BASIC": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "HARRY": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "POTTER": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "EREN": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "CHAPLIN": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "LUKE": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "ALCIN2": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "TK_UUD": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "OT_UUD": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_PRODUCT_CONCEPT_VLOGCAM"
+    },
+    "HC": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "RS": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "MT": {
+     "value": 2,
+     "label": "TYPE_PRODUCT_CONCEPT_OTHER"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_PRODUCT_CONCEPT_CINEMA_LINE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 12,
+   "name": "PRM_FEATURE_MANAGER_shutter_type_elec_strobe_flash",
+   "getter": "0x179820c",
+   "table": "0x370f7d0",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_NO_RESTRICTION"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_TYPE_ELEC_STROBE_FLASH_FIXED_OFF"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 13,
+   "name": "PRM_FEATURE_MANAGER_heif_digital_signature",
+   "getter": "0x1798344",
+   "table": "0x370ee10",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_NOT_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_NOT_SUPPORT"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_NOT_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_NOT_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_HEIF_DIGITAL_SIGNATURE_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 14,
+   "name": "PRM_FEATURE_MANAGER_wb_capture_size",
+   "getter": "0x17983a4",
+   "table": "0x370df08",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_WB_CAPTURE_SIZE_NOT_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_WB_CAPTURE_SIZE_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 15,
+   "name": "PRM_FEATURE_MANAGER_c2pa_movie",
+   "getter": "0x17985cc",
+   "table": "0x370cf98",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_C2PA_MOVIE_NOT_SUPPORT"
+    }
+   },
+   "differs": false
+  },
+  {
+   "prm_id": 16,
+   "name": "PRM_FEATURE_MANAGER_timelapse_movie_4k",
+   "getter": "0x1798674",
+   "table": "0x370e588",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_TIMELAPSE_MOVIE_4K_SUPPORT"
+    }
+   },
+   "differs": false
+  },
+  {
+   "prm_id": 17,
+   "name": "PRM_FEATURE_MANAGER_usb_streming_movie_4k",
+   "getter": "0x179868c",
+   "table": "0x370ec70",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_USB_STREMING_MOVIE_4K_SUPPORT"
+    }
+   },
+   "differs": false
+  },
+  {
+   "prm_id": 18,
+   "name": "PRM_FEATURE_MANAGER_drive_mode_dial",
+   "getter": "0x179802c",
+   "table": "0x370db60",
+   "values": {
+    "LS": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "YT": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "GL": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "LAX": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "ALCIN_UUD": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "SA": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "DZ": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "YS": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE"
+    },
+    "PP": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "SP": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "ATOM": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "TAKE_BASIC": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "HARRY": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "POTTER": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "EREN": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "CHAPLIN": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "LUKE": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "ALCIN2": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_DRIVE_MODE_DIAL_NOT_AVAILABLE"
+    },
+    "OT_UUD": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "NE": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE"
+    },
+    "RS": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "MT": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    },
+    "DOC": {
+     "value": 2,
+     "label": "TYPE_DRIVE_MODE_DIAL_AVAILABLE_WITH_MENU"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 19,
+   "name": "PRM_FEATURE_MANAGER_system_architecture",
+   "getter": "0x1797dbc",
+   "table": "0x370e728",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_ASTRA"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_ASTRA"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "RS": {
+     "value": 2,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_ARGO"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_SYSTEM_ARCHITECTURE_IPSX"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 21,
+   "name": "PRM_FEATURE_MANAGER_digital_signature_still_movie",
+   "getter": "0x1798854",
+   "table": "0x370f698",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_NOT_SUPPORT"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_DIGITAL_SIGNATURE_STILL_MOVIE_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 100,
+   "name": "PRM_FEATURE_MANAGER_steadyshot_correct_method_with_body",
+   "getter": "0x17985b4",
+   "table": "0x370fa40",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_ONLY_ELECTRICAL"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_ONLY_ELECTRICAL"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "ATOM": {
+     "value": 2,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_NONE"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_ONLY_ELECTRICAL"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_ONLY_ELECTRICAL"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_STEADYSHOT_CORRECT_METHOD_WITH_BODY_OPTICAL_AND_ELECTRICAL"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 103,
+   "name": "PRM_FEATURE_MANAGER_mecha_shutter",
+   "getter": "0x1797fb4",
+   "table": "0x370d8f0",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_NOT_AVAILABLE"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_MECHA_SHUTTER_MECHA_SHUTTER_AVAILABLE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 104,
+   "name": "PRM_FEATURE_MANAGER_shutter_curtain",
+   "getter": "0x1798314",
+   "table": "0x370dea0",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_CURTAIN_NOT_AVAILABLE"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_CURTAIN_NOT_AVAILABLE"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_CURTAIN_NOT_AVAILABLE"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_CURTAIN_NOT_AVAILABLE"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_CURTAIN_NOT_AVAILABLE"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_SHUTTER_CURTAIN_NOT_AVAILABLE"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_SHUTTER_CURTAIN_AVAILABLE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 105,
+   "name": "PRM_FEATURE_MANAGER_custom_mr_during_s1s2",
+   "getter": "0x17982e4",
+   "table": "0x370e998",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_SUPPORT"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_NOT_SUPPORT"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_CUSTOM_MR_DURING_S1S2_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 106,
+   "name": "PRM_FEATURE_MANAGER_zoom_still",
+   "getter": "0x1798764",
+   "table": "0x370d2d8",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_ZOOM_STILL_NOT_SUPPORT"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_ZOOM_STILL_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 107,
+   "name": "PRM_FEATURE_MANAGER_exclusive_during_digital_zoom",
+   "getter": "0x179853c",
+   "table": "0x370f700",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_EXCLUSION"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_DURING_DIGITAL_ZOOM_NO_EXCLUSION"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 112,
+   "name": "PRM_FEATURE_MANAGER_menu_item",
+   "getter": "0x1797d44",
+   "table": "0x370ce60",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_MENU_ITEM_LS"
+    },
+    "YT": {
+     "value": 4,
+     "label": null
+    },
+    "GL": {
+     "value": 3,
+     "label": null
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_MENU_ITEM_LAX"
+    },
+    "ALCIN_UUD": {
+     "value": 2,
+     "label": "TYPE_MENU_ITEM_ALCIN_UUD"
+    },
+    "SA": {
+     "value": 5,
+     "label": null
+    },
+    "DZ": {
+     "value": 6,
+     "label": null
+    },
+    "YS": {
+     "value": 7,
+     "label": null
+    },
+    "OS": {
+     "value": 8,
+     "label": null
+    },
+    "PP": {
+     "value": 9,
+     "label": null
+    },
+    "SP": {
+     "value": 10,
+     "label": null
+    },
+    "ATOM": {
+     "value": 11,
+     "label": null
+    },
+    "TAKE_BASIC": {
+     "value": 12,
+     "label": null
+    },
+    "HARRY": {
+     "value": 13,
+     "label": null
+    },
+    "POTTER": {
+     "value": 14,
+     "label": null
+    },
+    "EREN": {
+     "value": 15,
+     "label": null
+    },
+    "CHAPLIN": {
+     "value": 16,
+     "label": null
+    },
+    "LUKE": {
+     "value": 17,
+     "label": null
+    },
+    "ALCIN2": {
+     "value": 18,
+     "label": null
+    },
+    "TK_UUD": {
+     "value": 19,
+     "label": null
+    },
+    "OT_UUD": {
+     "value": 20,
+     "label": null
+    },
+    "NE": {
+     "value": 21,
+     "label": null
+    },
+    "HC": {
+     "value": 22,
+     "label": null
+    },
+    "RS": {
+     "value": 23,
+     "label": null
+    },
+    "MT": {
+     "value": 24,
+     "label": null
+    },
+    "DOC": {
+     "value": 25,
+     "label": null
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 113,
+   "name": "PRM_FEATURE_MANAGER_cont_shooting_type",
+   "getter": "0x179883c",
+   "table": "0x370e380",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_CONT_SHOOTING_TYPE_LOW_SPEED_CONT_SHOOTING"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_CONT_SHOOTING_TYPE_OTHER"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 237,
+   "name": "PRM_FEATURE_MANAGER_exclusive_focus_mag_during_bright_monitoring",
+   "getter": "0x179859c",
+   "table": "0x370fbe0",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_EXCLUSION"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_EXCLUSIVE_FOCUS_MAG_DURING_BRIGHT_MONITORING_NO_EXCLUSION"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 240,
+   "name": "PRM_FEATURE_MANAGER_support_cfexpress",
+   "getter": "0x1797f54",
+   "table": "0x370e318",
+   "values": {
+    "LS": {
+     "value": 2,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "DZ": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1_SLOT2"
+    },
+    "RS": {
+     "value": 2,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_SUPPORT_CFEXPRESS_NONE"
+    },
+    "DOC": {
+     "value": 2,
+     "label": "TYPE_SUPPORT_CFEXPRESS_SLOT1"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 663,
+   "name": "PRM_FEATURE_MANAGER_image_size_switch_onemount",
+   "getter": "0x179811c",
+   "table": "0x370f2f0",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "GL": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "PP": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "SP": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "ATOM": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_NOT_SUPPORT"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "RS": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "MT": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    },
+    "DOC": {
+     "value": 0,
+     "label": "TYPE_IMAGE_SIZE_SWITCH_ONEMOUNT_SUPPORT"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 949,
+   "name": "PRM_FEATURE_MANAGER_focus_mode_dial",
+   "getter": "0x1798014",
+   "table": "0x370dc30",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "SA": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "OS": {
+     "value": 0,
+     "label": "TYPE_FOCUS_MODE_DIAL_NOT_AVAILABLE"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": "TYPE_FOCUS_MODE_DIAL_NOT_AVAILABLE"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "NE": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "HC": {
+     "value": 0,
+     "label": "TYPE_FOCUS_MODE_DIAL_NOT_AVAILABLE"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_FOCUS_MODE_DIAL_AVAILABLE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 955,
+   "name": "PRM_FEATURE_MANAGER_flash_during_drive_mode_cont_shooting",
+   "getter": "0x1798194",
+   "table": "0x370faa8",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "YT": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "LAX": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_NOT_AVAILABLE"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "YS": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "HARRY": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "POTTER": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "EREN": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "LUKE": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_NOT_AVAILABLE"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SHOOTING_AVAILABLE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 958,
+   "name": "PRM_FEATURE_MANAGER_flash_during_drive_mode_cont_self_timer",
+   "getter": "0x17981ac",
+   "table": "0x370fb78",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "YT": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "GL": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "LAX": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "SA": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "DZ": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "YS": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "OS": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "PP": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "SP": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "ATOM": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "HARRY": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "POTTER": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "EREN": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "LUKE": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "NE": {
+     "value": 0,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_NOT_AVAILABLE"
+    },
+    "HC": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "RS": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "MT": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    },
+    "DOC": {
+     "value": 1,
+     "label": "TYPE_FLASH_DURING_DRIVE_MODE_CONT_SELF_TIMER_SHOOTING_AVAILABLE"
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 1455,
+   "name": "PRM_FEATURE_MANAGER_dmf_type",
+   "getter": "0x1798284",
+   "table": "0x370cd28",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": null
+    },
+    "YT": {
+     "value": 2,
+     "label": null
+    },
+    "GL": {
+     "value": 1,
+     "label": null
+    },
+    "LAX": {
+     "value": 1,
+     "label": null
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": null
+    },
+    "SA": {
+     "value": 1,
+     "label": null
+    },
+    "DZ": {
+     "value": 1,
+     "label": null
+    },
+    "YS": {
+     "value": 0,
+     "label": null
+    },
+    "OS": {
+     "value": 1,
+     "label": null
+    },
+    "PP": {
+     "value": 1,
+     "label": null
+    },
+    "SP": {
+     "value": 1,
+     "label": null
+    },
+    "ATOM": {
+     "value": 1,
+     "label": null
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": null
+    },
+    "HARRY": {
+     "value": 1,
+     "label": null
+    },
+    "POTTER": {
+     "value": 1,
+     "label": null
+    },
+    "EREN": {
+     "value": 1,
+     "label": null
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": null
+    },
+    "LUKE": {
+     "value": 1,
+     "label": null
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": null
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": null
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": null
+    },
+    "NE": {
+     "value": 1,
+     "label": null
+    },
+    "HC": {
+     "value": 1,
+     "label": null
+    },
+    "RS": {
+     "value": 1,
+     "label": null
+    },
+    "MT": {
+     "value": 0,
+     "label": null
+    },
+    "DOC": {
+     "value": 1,
+     "label": null
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 2186,
+   "name": "PRM_FEATURE_MANAGER_audio_rec_level_with_mishoe_mic",
+   "getter": "0x17984c4",
+   "table": "0x370f8a0",
+   "values": {
+    "LS": {
+     "value": 0,
+     "label": null
+    },
+    "YT": {
+     "value": 0,
+     "label": null
+    },
+    "GL": {
+     "value": 0,
+     "label": null
+    },
+    "LAX": {
+     "value": 0,
+     "label": null
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": null
+    },
+    "SA": {
+     "value": 0,
+     "label": null
+    },
+    "DZ": {
+     "value": 0,
+     "label": null
+    },
+    "YS": {
+     "value": 0,
+     "label": null
+    },
+    "OS": {
+     "value": 1,
+     "label": null
+    },
+    "PP": {
+     "value": 1,
+     "label": null
+    },
+    "SP": {
+     "value": 1,
+     "label": null
+    },
+    "ATOM": {
+     "value": 1,
+     "label": null
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": null
+    },
+    "HARRY": {
+     "value": 0,
+     "label": null
+    },
+    "POTTER": {
+     "value": 0,
+     "label": null
+    },
+    "EREN": {
+     "value": 0,
+     "label": null
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": null
+    },
+    "LUKE": {
+     "value": 0,
+     "label": null
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": null
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": null
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": null
+    },
+    "NE": {
+     "value": 1,
+     "label": null
+    },
+    "HC": {
+     "value": 1,
+     "label": null
+    },
+    "RS": {
+     "value": 1,
+     "label": null
+    },
+    "MT": {
+     "value": 1,
+     "label": null
+    },
+    "DOC": {
+     "value": 1,
+     "label": null
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 2565,
+   "name": "PRM_FEATURE_MANAGER_screen_reader_generation",
+   "getter": "0x17986d4",
+   "table": "0x370f0e8",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": null
+    },
+    "YT": {
+     "value": 1,
+     "label": null
+    },
+    "GL": {
+     "value": 1,
+     "label": null
+    },
+    "LAX": {
+     "value": 1,
+     "label": null
+    },
+    "ALCIN_UUD": {
+     "value": 0,
+     "label": null
+    },
+    "SA": {
+     "value": 2,
+     "label": null
+    },
+    "DZ": {
+     "value": 2,
+     "label": null
+    },
+    "YS": {
+     "value": 2,
+     "label": null
+    },
+    "OS": {
+     "value": 3,
+     "label": null
+    },
+    "PP": {
+     "value": 3,
+     "label": null
+    },
+    "SP": {
+     "value": 3,
+     "label": null
+    },
+    "ATOM": {
+     "value": 3,
+     "label": null
+    },
+    "TAKE_BASIC": {
+     "value": 0,
+     "label": null
+    },
+    "HARRY": {
+     "value": 0,
+     "label": null
+    },
+    "POTTER": {
+     "value": 0,
+     "label": null
+    },
+    "EREN": {
+     "value": 0,
+     "label": null
+    },
+    "CHAPLIN": {
+     "value": 0,
+     "label": null
+    },
+    "LUKE": {
+     "value": 0,
+     "label": null
+    },
+    "ALCIN2": {
+     "value": 0,
+     "label": null
+    },
+    "TK_UUD": {
+     "value": 0,
+     "label": null
+    },
+    "OT_UUD": {
+     "value": 0,
+     "label": null
+    },
+    "NE": {
+     "value": 3,
+     "label": null
+    },
+    "HC": {
+     "value": 3,
+     "label": null
+    },
+    "RS": {
+     "value": 4,
+     "label": null
+    },
+    "MT": {
+     "value": 4,
+     "label": null
+    },
+    "DOC": {
+     "value": 4,
+     "label": null
+    }
+   },
+   "differs": true
+  },
+  {
+   "prm_id": 2656,
+   "name": "PRM_FEATURE_MANAGER_exclusive_lcd_brightness_exclusion_by_temperature",
+   "getter": "0x179871c",
+   "table": "0x370fcb0",
+   "values": {
+    "LS": {
+     "value": 1,
+     "label": null
+    },
+    "YT": {
+     "value": 1,
+     "label": null
+    },
+    "GL": {
+     "value": 1,
+     "label": null
+    },
+    "LAX": {
+     "value": 1,
+     "label": null
+    },
+    "ALCIN_UUD": {
+     "value": 1,
+     "label": null
+    },
+    "SA": {
+     "value": 1,
+     "label": null
+    },
+    "DZ": {
+     "value": 1,
+     "label": null
+    },
+    "YS": {
+     "value": 1,
+     "label": null
+    },
+    "OS": {
+     "value": 1,
+     "label": null
+    },
+    "PP": {
+     "value": 1,
+     "label": null
+    },
+    "SP": {
+     "value": 1,
+     "label": null
+    },
+    "ATOM": {
+     "value": 1,
+     "label": null
+    },
+    "TAKE_BASIC": {
+     "value": 1,
+     "label": null
+    },
+    "HARRY": {
+     "value": 1,
+     "label": null
+    },
+    "POTTER": {
+     "value": 1,
+     "label": null
+    },
+    "EREN": {
+     "value": 1,
+     "label": null
+    },
+    "CHAPLIN": {
+     "value": 1,
+     "label": null
+    },
+    "LUKE": {
+     "value": 1,
+     "label": null
+    },
+    "ALCIN2": {
+     "value": 1,
+     "label": null
+    },
+    "TK_UUD": {
+     "value": 1,
+     "label": null
+    },
+    "OT_UUD": {
+     "value": 1,
+     "label": null
+    },
+    "NE": {
+     "value": 1,
+     "label": null
+    },
+    "HC": {
+     "value": 1,
+     "label": null
+    },
+    "RS": {
+     "value": 1,
+     "label": null
+    },
+    "MT": {
+     "value": 0,
+     "label": null
+    },
+    "DOC": {
+     "value": 1,
+     "label": null
+    }
+   },
+   "differs": true
+  }
+ ]
+}
